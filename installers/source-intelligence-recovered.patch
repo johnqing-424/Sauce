@@ -1,100 +1,5 @@
-From fbb686156736ce7963828d9dab8916e139a22e2f Mon Sep 17 00:00:00 2001
-From: johnny <fsdgsdgtersdgsdgsd@gmail.com>
-Date: Mon, 12 Oct 2026 02:53:50 +0000
-Subject: [PATCH] feat: recover source intelligence MVP and package Windows
- installer
-
----
- CONFIGURATION.md                              | 105 +-
- changelog.d/source-intelligence.added.md      |   1 +
- deploy/intelligence/Install-Windows.cmd       |  40 +
- ...77\347\224\250\350\257\264\346\230\216.md" |  22 +
- deploy/intelligence/install.py                |  99 ++
- .../last30days-intel-daily.service            |  16 +
- .../intelligence/last30days-intel-daily.timer |  11 +
- .../last30days-intel-deliver.service          |  16 +
- .../last30days-intel-deliver.timer            |  11 +
- .../last30days-intel-watch.service            |  16 +
- .../intelligence/last30days-intel-watch.timer |  11 +
- .../last30days-intel-weekly.service           |  16 +
- .../last30days-intel-weekly.timer             |  11 +
- deploy/intelligence/package.py                |  90 ++
- docs/source-intelligence-audit.md             |  44 +
- docs/source-intelligence-live-checks.json     | 935 ++++++++++++++++++
- docs/source-intelligence-recovery.md          |  49 +
- docs/source-intelligence-verification.md      |  77 ++
- docs/source-intelligence.md                   | 406 ++++++++
- .../plans/2026-10-10-source-intelligence.md   |  59 ++
- .../2026-10-10-source-intelligence-design.md  |  76 ++
- skills/last30days/SKILL.md                    |  15 +-
- skills/last30days/intelligence.env.example    |  38 +
- skills/last30days/intelligence.example.json   |  33 +
- skills/last30days/references/intelligence.md  | 142 +++
- skills/last30days/scripts/intelligence.py     | 111 +++
- .../scripts/lib/intelligence/__init__.py      |   1 +
- .../scripts/lib/intelligence/analysis.py      | 200 ++++
- .../scripts/lib/intelligence/configuration.py |  67 ++
- .../scripts/lib/intelligence/delivery.py      | 612 ++++++++++++
- .../scripts/lib/intelligence/engine.py        | 117 +++
- .../scripts/lib/intelligence/knowledge.py     | 292 ++++++
- .../scripts/lib/intelligence/models.py        | 146 +++
- .../scripts/lib/intelligence/reports.py       |  73 ++
- .../scripts/lib/intelligence/runner.py        | 180 ++++
- .../scripts/lib/intelligence/service.py       | 230 +++++
- .../scripts/lib/intelligence/sources.py       | 670 +++++++++++++
- .../scripts/lib/intelligence/transport.py     | 343 +++++++
- tests/skill_contract.py                       |   1 +
- tests/test_env_doc_contract.py                |   9 +-
- tests/test_intelligence_cli.py                | 283 ++++++
- tests/test_intelligence_core.py               | 407 ++++++++
- tests/test_intelligence_delivery.py           | 705 +++++++++++++
- tests/test_intelligence_install.py            |  69 ++
- tests/test_intelligence_sources.py            | 662 +++++++++++++
- 45 files changed, 7509 insertions(+), 8 deletions(-)
- create mode 100644 changelog.d/source-intelligence.added.md
- create mode 100644 deploy/intelligence/Install-Windows.cmd
- create mode 100644 "deploy/intelligence/Windows-\344\275\277\347\224\250\350\257\264\346\230\216.md"
- create mode 100644 deploy/intelligence/install.py
- create mode 100644 deploy/intelligence/last30days-intel-daily.service
- create mode 100644 deploy/intelligence/last30days-intel-daily.timer
- create mode 100644 deploy/intelligence/last30days-intel-deliver.service
- create mode 100644 deploy/intelligence/last30days-intel-deliver.timer
- create mode 100644 deploy/intelligence/last30days-intel-watch.service
- create mode 100644 deploy/intelligence/last30days-intel-watch.timer
- create mode 100644 deploy/intelligence/last30days-intel-weekly.service
- create mode 100644 deploy/intelligence/last30days-intel-weekly.timer
- create mode 100644 deploy/intelligence/package.py
- create mode 100644 docs/source-intelligence-audit.md
- create mode 100644 docs/source-intelligence-live-checks.json
- create mode 100644 docs/source-intelligence-recovery.md
- create mode 100644 docs/source-intelligence-verification.md
- create mode 100644 docs/source-intelligence.md
- create mode 100644 docs/superpowers/plans/2026-10-10-source-intelligence.md
- create mode 100644 docs/superpowers/specs/2026-10-10-source-intelligence-design.md
- create mode 100644 skills/last30days/intelligence.env.example
- create mode 100644 skills/last30days/intelligence.example.json
- create mode 100644 skills/last30days/references/intelligence.md
- create mode 100644 skills/last30days/scripts/intelligence.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/__init__.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/analysis.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/configuration.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/delivery.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/engine.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/knowledge.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/models.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/reports.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/runner.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/service.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/sources.py
- create mode 100644 skills/last30days/scripts/lib/intelligence/transport.py
- create mode 100644 tests/test_intelligence_cli.py
- create mode 100644 tests/test_intelligence_core.py
- create mode 100644 tests/test_intelligence_delivery.py
- create mode 100644 tests/test_intelligence_install.py
- create mode 100644 tests/test_intelligence_sources.py
-
 diff --git a/CONFIGURATION.md b/CONFIGURATION.md
-index 2fdf757..83e4365 100644
+index 2fdf757..7ed7741 100644
 --- a/CONFIGURATION.md
 +++ b/CONFIGURATION.md
 @@ -9,7 +9,7 @@ Three layers, in order of how often you'll touch them:
@@ -114,7 +19,7 @@ index 2fdf757..83e4365 100644
  
  The footer line `📎 Raw results saved to <resolved memory directory>/<slug>-raw.md` is the canonical pointer; if it shows backslashes on Windows update past v3.1.1. An explicitly disabled save produces no saved-file pointer.
  
-@@ -604,6 +605,108 @@ Add `--debug` to any run to emit verbose `[DEBUG]` log lines to stderr from the
+@@ -604,6 +605,126 @@ Add `--debug` to any run to emit verbose `[DEBUG]` log lines to stderr from the
  
  ---
  
@@ -160,7 +65,7 @@ index 2fdf757..83e4365 100644
 +
 +| Path/control | Precedence or behavior |
 +|---|---|
-+| JSON settings file | `--config` > `LAST30DAYS_INTEL_CONFIG`; absent uses built-in defaults |
++| JSON settings file | `--config` > `LAST30DAYS_INTEL_CONFIG` > existing `~/.config/last30days/intelligence.json` > built-in defaults; no project-file auto-loading |
 +| SQLite path | `--db` > process `LAST30DAYS_INTEL_DB` > explicit env-file value > JSON `db` > `~/.local/share/last30days/research.db` |
 +| Local reports | `--report-dir` > process `LAST30DAYS_INTEL_REPORT_DIR` > explicit env-file value > JSON `report_dir` > `~/.local/share/last30days/intelligence/reports` |
 +| Enabled channels | `LAST30DAYS_INTEL_CHANNELS`, comma-separated names; process environment overrides env-file |
@@ -182,6 +87,7 @@ index 2fdf757..83e4365 100644
 +| `lookback_days`, `max_reports` | `30`, `4` | Discovery window and reports per scan |
 +| `engine_sources` | `["reddit", "hackernews"]` | Explicit free upstream sources; optional X requires pinned `bird` and authorized manual cookies, never browser extraction |
 +| `cache_seconds`, `source_check_interval_seconds` | `86400`, `3600` | Cached snapshot age and accumulated-source recheck cadence |
++| `local_proxy_url` | `null` | Explicit unauthenticated loopback HTTP proxy for known public providers on an unmanaged Fake-IP network |
 +| `threshold_a`, `threshold_b`, `confidence_threshold` | `85`, `60`, `0.7` | A/B value proxies plus primary-evidence eligibility; evidence-poor observations stay `hold` |
 +| `min_delivery_interval_seconds` | `1` | Per-channel interval persisted in SQLite; flush defers rather than sleeping |
 +| `weights` | novelty `.15`, originality `.15`, technical value `.20`, application potential `.15`, confidence `.20`, evidence quality `.15`, engagement `0` | Configurable deterministic proxies; weighted score does not establish scientific innovation |
@@ -191,6 +97,23 @@ index 2fdf757..83e4365 100644
 +adapter/traversal operations are separately bounded. Free retrieval does not
 +promise unrestricted access: 403/429/auth and network-policy failures stay in
 +source outcomes rather than becoming fabricated quiet-domain conclusions.
++
++Clash/Mihomo Fake-IP DNS can resolve public GitHub names into the reserved
++`198.18.0.0/15` range, which ordinary address validation correctly rejects.
++On a user-controlled unmanaged machine, set `local_proxy_url` in the private
++JSON to `http://127.0.0.1:<mixed-or-HTTP-port>` (or numeric `[::1]`). The port
++must be explicit; SOCKS, authentication, remote proxies and URL paths are
++rejected. This delegates DNS only for the exact known provider hosts in
++`transport.py`; unknown websites still require checked public addresses.
++HTTPS CONNECT and origin certificate verification remain enabled. Retrieval
++metadata reports `delegated_to_trusted_local_proxy` and
++`local_address_verified: false`; the proxy endpoint is not saved in evidence.
++The configured proxy is a local trust boundary, not proof of its remote DNS
++address. A managed environment policy takes precedence and cannot be overridden.
++Use `deploy/intelligence/Repair-Clash.cmd` from the dedicated repair ZIP after
++installing the Windows bundle. It backs up supported installed files, probes
++real GitHub HTTPS before saving opt-in, then runs a bounded trace without sends.
++It does not edit Clash settings or the Windows system proxy.
 +
 +Channel variables (all names below use the `LAST30DAYS_INTEL_` prefix):
 +
@@ -223,6 +146,17 @@ index 2fdf757..83e4365 100644
  ## Trend monitoring (`--store` + watchlist + briefings)
  
  The default behavior - one slug-named file per topic, overwritten on rerun - is the snapshot mode. For continuous monitoring, the repo ships three components most users miss:
+diff --git a/changelog.d/intelligence-local-proxy.fixed.md b/changelog.d/intelligence-local-proxy.fixed.md
+new file mode 100644
+index 0000000..168b166
+--- /dev/null
++++ b/changelog.d/intelligence-local-proxy.fixed.md
+@@ -0,0 +1,5 @@
++Support explicit numeric-loopback HTTP proxies for source-intelligence retrieval
++on unmanaged Clash/Mihomo Fake-IP networks, retaining origin TLS and exact public
++provider restrictions. Load the trusted home JSON profile by default and provide
++a version-checked Windows repair helper that backs up files, verifies the real
++proxy before saving configuration, and reruns a bounded trace.
 diff --git a/changelog.d/source-intelligence.added.md b/changelog.d/source-intelligence.added.md
 new file mode 100644
 index 0000000..d2efa31
@@ -276,12 +210,56 @@ index 0000000..1369eab
 +echo Installation failed. Keep this window open and show the error to Codex.
 +pause
 +exit /b %INTEL_INSTALL_EXIT%
+diff --git a/deploy/intelligence/Repair-Clash.cmd b/deploy/intelligence/Repair-Clash.cmd
+new file mode 100644
+index 0000000..bd5486c
+--- /dev/null
++++ b/deploy/intelligence/Repair-Clash.cmd
+@@ -0,0 +1,38 @@
++@echo off
++setlocal
++cd /d "%~dp0"
++py -3 -c "import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)" >nul 2>&1
++if not errorlevel 1 goto use_py
++python -c "import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)" >nul 2>&1
++if not errorlevel 1 goto use_python
++where uv >nul 2>&1
++if not errorlevel 1 goto use_uv
++echo Python 3.12+ is required. Keep this window open and show it to Codex.
++pause
++exit /b 1
++
++:use_py
++py -3 "%~dp0repair_clash.py" %*
++goto finish
++
++:use_python
++python "%~dp0repair_clash.py" %*
++goto finish
++
++:use_uv
++uv run --no-project --python 3.12 python "%~dp0repair_clash.py" %*
++
++:finish
++set INTEL_REPAIR_EXIT=%errorlevel%
++echo.
++if not "%INTEL_REPAIR_EXIT%"=="0" goto failed
++echo Network repair and real trace completed. You can continue in local Codex.
++echo Try: $last30days intelligence discover robotics
++pause
++exit /b 0
++
++:failed
++echo Repair or real trace is incomplete. Keep Clash running.
++echo Keep this window open and show the result to Codex.
++pause
++exit /b %INTEL_REPAIR_EXIT%
 diff --git "a/deploy/intelligence/Windows-\344\275\277\347\224\250\350\257\264\346\230\216.md" "b/deploy/intelligence/Windows-\344\275\277\347\224\250\350\257\264\346\230\216.md"
 new file mode 100644
-index 0000000..fde3cf7
+index 0000000..2012922
 --- /dev/null
 +++ "b/deploy/intelligence/Windows-\344\275\277\347\224\250\350\257\264\346\230\216.md"
-@@ -0,0 +1,22 @@
+@@ -0,0 +1,38 @@
 +# Windows 本机安装
 +
 +1. 下载并完整解压 `last30days-intelligence-windows.zip`。不要在压缩包内直接运行。
@@ -304,6 +282,22 @@ index 0000000..fde3cf7
 +此版本从原开发会话保存的修改记录恢复；通知模块中无法取回的尾部按原接口重建，
 +验收结果以恢复后的重新测试为准，不能视为原提交 `34fc4bb` 的逐字节副本。
 +云端验证不能代替你的 Windows 实机安装验证。
++
++## 已安装，但 GitHub 溯源提示地址不公开
++
++如果你使用 Clash / Clash Verge / Mihomo，且错误中出现 `198.18.*`，这是
++Fake-IP 与地址检查的兼容问题。保持 Clash 开启，下载专用的
++`last30days-clash-repair.zip`，完整解压，双击 `Repair-Clash.cmd`。
++
++修复器会备份支持版本的联网文件，检测本机 HTTP/mixed 代理端口。通过真实
++GitHub HTTPS 验证后，它会保存 Skill 私有配置并自动再次溯源。看到
++`external_trace_verified` 表示那台电脑实际取到了证据；模拟测试不能代替这个
++结果。数据库和已有报告保留，不会发送通知或修改 Clash/Windows 代理设置。
++
++如果显示 `No verified proxy`，打开 Clash 设置查看 HTTP/mixed 端口，然后把
++窗口结果告诉本机 Codex。也可在终端执行 `Repair-Clash.cmd --proxy
++http://127.0.0.1:实际端口`。如果提示版本不匹配，使用最新完整安装包；原副本
++仍会备份。恢复方法与真实测试范围见修复 ZIP 的 `修复说明.md`。
 diff --git a/deploy/intelligence/install.py b/deploy/intelligence/install.py
 new file mode 100644
 index 0000000..d5f0b84
@@ -567,22 +561,25 @@ index 0000000..1f824f5
 +WantedBy=timers.target
 diff --git a/deploy/intelligence/package.py b/deploy/intelligence/package.py
 new file mode 100644
-index 0000000..e2cb949
+index 0000000..061959e
 --- /dev/null
 +++ b/deploy/intelligence/package.py
-@@ -0,0 +1,90 @@
+@@ -0,0 +1,139 @@
 +"""Build a portable Skill bundle from staged public files and a verified tzdata wheel."""
 +from __future__ import annotations
 +
 +import argparse
 +import hashlib
 +import json
++import re
 +import shutil
 +import subprocess
 +import sys
 +import tempfile
 +import zipfile
 +from pathlib import Path, PurePosixPath
++
++from repair_clash import ALLOWED_FILES
 +
 +
 +def build(repo: Path, output: Path, wheel: Path, provenance: Path) -> dict:
@@ -649,18 +646,346 @@ index 0000000..e2cb949
 +            'sha256': hashlib.sha256(output.read_bytes()).hexdigest()}
 +
 +
++def build_repair(repo: Path, output: Path, base_commit: str) -> dict:
++    """Ship only public, explicitly supported changed files plus the repair helper."""
++    if not re.fullmatch(r'[0-9a-f]{7,40}', base_commit):
++        raise ValueError('A pinned base commit is required')
++    output.parent.mkdir(parents=True, exist_ok=True)
++    with tempfile.TemporaryDirectory(prefix='intel-network-package-') as temp:
++        package = Path(temp) / 'last30days-clash-repair'
++        payload = package / 'payload'
++        payload.mkdir(parents=True)
++        manifest = {'format': 1, 'base_commit': base_commit, 'files': {}}
++        for name in sorted(ALLOWED_FILES):
++            source = repo / 'skills/last30days' / name
++            before = subprocess.check_output(['git', 'show', f'{base_commit}:skills/last30days/{name}'], cwd=repo)
++            if source.is_symlink() or not source.is_file():
++                raise ValueError('Only ordinary public files may be packaged')
++            after = source.read_bytes()
++            if source.suffix == '.py':
++                compile(after, str(source), 'exec')
++            target = payload / name
++            target.parent.mkdir(parents=True, exist_ok=True)
++            target.write_bytes(after)
++            manifest['files'][name] = {'before': hashlib.sha256(before).hexdigest(),
++                                      'after': hashlib.sha256(after).hexdigest()}
++        (payload / 'manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
++        deploy = repo / 'deploy/intelligence'
++        for name in ('repair_clash.py', '修复说明.md'):
++            shutil.copy2(deploy / name, package / name)
++        batch = (deploy / 'Repair-Clash.cmd').read_text(encoding='utf-8')
++        (package / 'Repair-Clash.cmd').write_bytes(batch.replace('\n', '\r\n').encode('utf-8'))
++        shutil.copy2(repo / 'LICENSE', package / 'LICENSE')
++        with zipfile.ZipFile(output, 'w', zipfile.ZIP_DEFLATED) as archive:
++            for path in sorted(package.rglob('*')):
++                if path.is_file():
++                    archive.write(path, str(path.relative_to(Path(temp))).replace('\\', '/'))
++    return {'path': str(output), 'files': len(manifest['files']), 'bytes': output.stat().st_size,
++            'sha256': hashlib.sha256(output.read_bytes()).hexdigest()}
++
++
 +def main() -> None:
 +    parser = argparse.ArgumentParser()
 +    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[2])
 +    parser.add_argument('--output', type=Path, required=True)
-+    parser.add_argument('--tzdata-wheel', type=Path, required=True)
-+    parser.add_argument('--tzdata-provenance', type=Path, required=True)
++    parser.add_argument('--tzdata-wheel', type=Path)
++    parser.add_argument('--tzdata-provenance', type=Path)
++    parser.add_argument('--repair-only', action='store_true', help='Build the small Clash repair ZIP')
++    parser.add_argument('--base-commit', default='fbb686156736ce7963828d9dab8916e139a22e2f')
 +    args = parser.parse_args()
-+    print(json.dumps(build(args.repo, args.output, args.tzdata_wheel, args.tzdata_provenance), indent=2))
++    if args.repair_only:
++        result = build_repair(args.repo, args.output, args.base_commit)
++    else:
++        if args.tzdata_wheel is None or args.tzdata_provenance is None:
++            parser.error('Full bundles require --tzdata-wheel and --tzdata-provenance')
++        result = build(args.repo, args.output, args.tzdata_wheel, args.tzdata_provenance)
++    print(json.dumps(result, indent=2))
 +
 +
 +if __name__ == '__main__':
 +    main()
+diff --git a/deploy/intelligence/repair_clash.py b/deploy/intelligence/repair_clash.py
+new file mode 100644
+index 0000000..a2c79e5
+--- /dev/null
++++ b/deploy/intelligence/repair_clash.py
+@@ -0,0 +1,235 @@
++"""Backed-up, version-checked Skill repair and an explicit Clash HTTP proxy probe.
++
++Does not change Windows/Clash configuration, read cookies, or send notifications.
++The actual HTTPS probe and trace run on the machine invoking this helper.
++"""
++from __future__ import annotations
++
++import argparse
++import hashlib
++import json
++import os
++import re
++import sys
++import tempfile
++import uuid
++from datetime import datetime
++from pathlib import Path
++
++
++ALLOWED_FILES = frozenset({
++    'scripts/lib/intelligence/transport.py',
++    'scripts/lib/intelligence/configuration.py',
++    'scripts/lib/intelligence/service.py',
++    'intelligence.example.json', 'references/intelligence.md',
++})
++PROBE_URL = 'https://github.com/mvanhorn/last30days-skill'
++
++
++def _proxy(value: str) -> str:
++    match = re.fullmatch(r'http://(127\.0\.0\.1|\[::1\]):([1-9][0-9]{0,4})/?', value or '')
++    if not match or int(match[2]) > 65535:
++        raise ValueError('Use an unauthenticated numeric-loopback HTTP proxy with an explicit port')
++    return f'http://{match[1]}:{int(match[2])}'
++
++
++def _plain_file(path: Path, root: Path) -> bool:
++    relative = path.relative_to(root)
++    current = root
++    for part in ('', *relative.parts):
++        current = current / part
++        if current.is_symlink() or (hasattr(current, 'is_junction') and current.is_junction()):
++            return False
++    return path.is_file()
++
++
++def _stamp() -> str:
++    return datetime.now().strftime('%Y%m%d-%H%M%S') + '-' + uuid.uuid4().hex[:8]
++
++
++def _atomic_write(path: Path, data: bytes) -> None:
++    fd, name = tempfile.mkstemp(prefix='.intel-repair-', dir=path.parent)
++    try:
++        with os.fdopen(fd, 'wb') as stream:
++            stream.write(data)
++            stream.flush()
++            os.fsync(stream.fileno())
++        os.chmod(name, 0o600)
++        os.replace(name, path)
++    finally:
++        Path(name).unlink(missing_ok=True)
++
++
++def update_skill(source: Path, installed: Path) -> dict:
++    """Refuse custom versions and unsafe paths; roll back a partial replacement."""
++    manifest = json.loads((source / 'manifest.json').read_text(encoding='utf-8'))
++    files = manifest.get('files')
++    required = {name for name in ALLOWED_FILES if name.endswith('.py')}
++    if manifest.get('format') != 1 or not isinstance(files, dict) or not required.issubset(files) or set(files) - ALLOWED_FILES:
++        raise ValueError('Invalid network repair manifest')
++    pending = {}
++    for name, hashes in files.items():
++        packaged, target = source / name, installed / name
++        if not _plain_file(packaged, source) or not _plain_file(target, installed):
++            raise ValueError('Missing or linked Skill files; use the full installer')
++        data = packaged.read_bytes()
++        expected = hashes.get('after')
++        if hashlib.sha256(data).hexdigest() != expected:
++            raise ValueError('Corrupt network repair package')
++        if name.endswith('.py'):
++            compile(data, str(packaged), 'exec')
++        original = target.read_bytes()
++        digest = hashlib.sha256(original).hexdigest()
++        if digest == expected:
++            continue
++        if digest != hashes.get('before'):
++            raise ValueError('Skill has a different or customized version; use the full installer')
++        pending[name] = (original, data)
++    if not pending:
++        return {'status': 'already_updated', 'backup': None}
++    backup = installed.parent / ('.last30days-network-backup-' + _stamp())
++    backup.mkdir()
++    for name, (original, _) in pending.items():
++        path = backup / name
++        path.parent.mkdir(parents=True, exist_ok=True)
++        path.write_bytes(original)
++    changed = []
++    try:
++        for name, (_, data) in pending.items():
++            _atomic_write(installed / name, data)
++            changed.append(name)
++    except BaseException:
++        for name in reversed(changed):
++            _atomic_write(installed / name, pending[name][0])
++        raise
++    return {'status': 'updated', 'backup': str(backup)}
++
++
++def configure_proxy(profile: Path, proxy: str, *, probe=None) -> dict:
++    """Keep other settings and a private backup; a failed probe cannot save opt-in."""
++    proxy = _proxy(proxy)
++    if profile.is_symlink() or (hasattr(profile, 'is_junction') and profile.is_junction()):
++        raise ValueError('Configuration must be an ordinary private file')
++    original = profile.read_bytes() if profile.exists() else None
++    settings = json.loads(original.decode('utf-8')) if original is not None else {}
++    if not isinstance(settings, dict):
++        raise ValueError('Configuration must be an object')
++    if (probe or probe_proxy)(proxy) is not True:
++        raise ValueError('Proxy could not verify the real public GitHub resource')
++    if settings.get('local_proxy_url') == proxy:
++        return {'status': 'already_configured', 'backup': None}
++    profile.parent.mkdir(parents=True, exist_ok=True)
++    backup = None
++    if original is not None:
++        backup = profile.with_name('.intelligence-config-backup-' + _stamp() + '.json')
++        backup.write_bytes(original)
++        os.chmod(backup, 0o600)
++    settings['local_proxy_url'] = proxy
++    _atomic_write(profile, (json.dumps(settings, indent=2, ensure_ascii=False) + '\n').encode('utf-8'))
++    return {'status': 'configured', 'backup': str(backup) if backup else None}
++
++
++def proxy_candidates(registry_server: str = '') -> list[str]:
++    """Read only loopback endpoint hints; never fetch Clash subscriptions/secrets."""
++    candidates = []
++    for part in registry_server.split(';'):
++        endpoint = part.partition('=')[2] if '=' in part else part
++        value = endpoint.strip()
++        try:
++            value = _proxy(value if value.startswith('http://') else 'http://' + value)
++        except ValueError:
++            continue
++        if value not in candidates:
++            candidates.append(value)
++    for port in (7897, 7890):
++        value = f'http://127.0.0.1:{port}'
++        if value not in candidates:
++            candidates.append(value)
++    return candidates[:4]
++
++
++def _windows_hint() -> str:
++    try:
++        import winreg
++        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, r'Software\Microsoft\Windows\CurrentVersion\Internet Settings') as key:
++            value, _ = winreg.QueryValueEx(key, 'ProxyServer')
++            return value if isinstance(value, str) else ''
++    except (ImportError, OSError):
++        return ''
++
++
++def probe_proxy(proxy: str) -> bool:
++    from lib.intelligence.models import Budget, Limits
++    from lib.intelligence.transport import PublicTransport
++    response = PublicTransport(local_proxy_url=_proxy(proxy)).get(
++        PROBE_URL, Budget(Limits(max_calls=3, max_nodes=1, max_seconds=15, request_timeout=5)),
++    )
++    return (200 <= response.status < 300
++            and response.retrieval.get('dns_validation') == 'delegated_to_trusted_local_proxy'
++            and response.content_type == 'text/html'
++            and b'mvanhorn/last30days-skill' in response.body)
++
++
++def main() -> int:
++    parser = argparse.ArgumentParser(description='Repair this user\'s installed Skill for Clash Fake-IP')
++    parser.add_argument('--payload', type=Path, default=Path(__file__).resolve().parent / 'payload')
++    parser.add_argument('--skill-dir', type=Path, default=Path.home() / '.agents/skills/last30days')
++    parser.add_argument('--config', type=Path)
++    parser.add_argument('--proxy', help='Optional http://127.0.0.1:<Clash mixed/HTTP port>')
++    args = parser.parse_args()
++    if sys.version_info < (3, 12):
++        raise RuntimeError('Python 3.12 or newer is required')
++    print('Step 1/3: Verify, back up and update the installed Skill.', flush=True)
++    print(json.dumps(update_skill(args.payload, args.skill_dir), ensure_ascii=True, indent=2))
++    sys.path.insert(0, str(args.skill_dir / 'scripts'))
++    from lib.intelligence.configuration import load_settings
++    profile = args.config or Path(os.environ.get('LAST30DAYS_INTEL_CONFIG') or Path.home() / '.config/last30days/intelligence.json').expanduser()
++    # Validate existing settings before attempting to persist the proxy choice.
++    load_settings(str(profile if profile.exists() else args.skill_dir / 'intelligence.example.json'))
++    candidates = [_proxy(args.proxy)] if args.proxy else proxy_candidates(_windows_hint())
++    print('Step 2/3: Verify GitHub HTTPS through the local Clash proxy.', flush=True)
++    configured = False
++    for candidate in candidates:
++        try:
++            result = configure_proxy(profile, candidate)
++        except Exception as exc:
++            print('Local proxy candidate failed: ' + type(exc).__name__, flush=True)
++            continue
++        print(json.dumps(result, ensure_ascii=True, indent=2))
++        configured = True
++        break
++    if not configured:
++        print('No verified proxy. Keep Clash running; check its mixed/HTTP port and retry with --proxy.')
++        return 2
++    print('Step 3/3: Run a real bounded source trace; no messages will be sent.', flush=True)
++    settings = load_settings(str(profile))
++    for key, cap in {'max_depth': 1, 'max_calls': 12, 'max_nodes': 5, 'max_seconds': 60, 'request_timeout': 8}.items():
++        settings['limits'][key] = min(settings['limits'][key], cap)
++    from lib.intelligence.service import IntelligenceService
++    report = IntelligenceService(settings).trace(PROBE_URL, refresh=True)
++    current_resource = any(
++        row['url'].rstrip('/') == PROBE_URL
++        and row['metadata'].get('freshness_status') != 'historical_not_revalidated'
++        for row in report['resources']
++    )
++    current_evidence = any(
++        row['url'].rstrip('/') == PROBE_URL
++        and row.get('freshness_status') != 'historical_not_revalidated'
++        for row in report['evidence']
++    )
++    verified = current_resource and current_evidence
++    print(json.dumps({'status': 'external_trace_verified' if verified else 'trace_incomplete',
++                      'resources': len(report['resources']), 'evidence': len(report['evidence']),
++                      'verification_status': report['verification_status'],
++                      'reports': {'json': report['report_path'], 'markdown': report['markdown_path']},
++                      'source_failures': report['failures']}, ensure_ascii=True, indent=2))
++    return 0 if verified else 3
++
++
++if __name__ == '__main__':
++    try:
++        raise SystemExit(main())
++    except Exception as exc:
++        # Do not print exceptions that might contain private configuration values.
++        print('Repair failed: ' + type(exc).__name__ + '. Keep this window open and show it to Codex.', file=sys.stderr)
++        raise SystemExit(1)
+diff --git "a/deploy/intelligence/\344\277\256\345\244\215\350\257\264\346\230\216.md" "b/deploy/intelligence/\344\277\256\345\244\215\350\257\264\346\230\216.md"
+new file mode 100644
+index 0000000..8fce85e
+--- /dev/null
++++ "b/deploy/intelligence/\344\277\256\345\244\215\350\257\264\346\230\216.md"
+@@ -0,0 +1,35 @@
++# Clash 本机联网修复
++
++适用于已经安装 last30days 情报 MVP、使用 Clash / Clash Verge / Mihomo，
++且 GitHub 因 `198.18.*` 非公开地址而无法溯源的 Windows 电脑。
++
++1. 保持 Clash 开启。
++2. 完整解压此 ZIP，双击 `Repair-Clash.cmd`。
++3. 等待三个步骤结束。出现 `external_trace_verified` 表示真实 GitHub 证据已经
++   取回；`source_failures` 会保留其他未成功来源，不能当作全部资源已验证。
++4. 在本机 Codex 输入 `$last30days intelligence discover robotics`，或描述领域。
++
++修复器需要 Python 3.12+。它仅替换支持版本中的五个公开 Skill 文件，校验 SHA256
++和 Python 语法；不同或自定义版本会拒绝覆盖。原文件备份在用户 Skill 目录旁的
++`.last30days-network-backup-日期-随机值`。磁盘写入失败时会恢复已替换文件。
++已有 SQLite、报告、通知凭据和其他设置保留。代理配置的旧 JSON 另有私有备份。
++
++程序读取 Windows 注册表的代理端口提示，并最多尝试四个数字回环候选，包括常见
++7897/7890。只有实际 GitHub HTTPS 成功才写 `local_proxy_url`。自定义端口可从终端
++运行 `Repair-Clash.cmd --proxy http://127.0.0.1:实际端口`，无需提供代理订阅或密码。
++配置写入 `LAST30DAYS_INTEL_CONFIG` 指定文件，或当前用户
++`%USERPROFILE%\.config\last30days\intelligence.json`；此用户文件会被以后调用自动加载。
++
++仅支持数字回环 HTTP/mixed 代理，不支持 SOCKS、代理认证或远程代理。仅已明确列出
++的公共平台通过代理解析；未知网站仍可能因 Fake-IP 被拒绝。源站 TLS 检查保留；
++证据会明确记录地址解析由可信本机代理承担，不能验证代理远端地址。修复不会绕过
++托管云端网络策略、关闭地址检查、更改 Clash 设置或启用系统代理。
++
++不发送消息、不启用定时任务。真实推送仍需你的消息目标和凭据。
++
++如需恢复：关闭运行中的研究任务，将文件备份中的五个文件复制回原 Skill 目录；
++若存在配置备份，把它复制回原配置文件。没有旧配置备份时，可从用户 JSON 中删除
++`local_proxy_url` 或设为 `null`。不要把私人配置内容发到公开仓库。
++
++发布前验证包括模拟 Fake-IP/代理测试、证书与跳转限制、真实临时文件备份/回滚及
++修复 ZIP 完整性。云端不能连接你的 Clash；Windows 实际联网结论以步骤三输出为准。
 diff --git a/docs/source-intelligence-audit.md b/docs/source-intelligence-audit.md
 new file mode 100644
 index 0000000..9ee3e45
@@ -711,6 +1036,121 @@ index 0000000..9ee3e45
 +6. 图、来源与验证历史写入原 SQLite 的独立扩展表；原有表继续通过原测试。
 +7. Telegram、飞书、generic webhook 的消息格式与发送失败处理经过模拟验收。
 +8. 真实外部检索和真实发送单独记录；缺网络授权/凭据时不宣称外部链路已验证。
+diff --git a/docs/source-intelligence-clash-repair.md b/docs/source-intelligence-clash-repair.md
+new file mode 100644
+index 0000000..3a069f9
+--- /dev/null
++++ b/docs/source-intelligence-clash-repair.md
+@@ -0,0 +1,51 @@
++# Windows Clash Fake-IP 修复与验证
++
++日期：2026-10-12。修复基于恢复源码提交 `fbb6861`，不改上游版本号。
++
++## 直接原因
++
++用户的 Windows 安装器已经显示 `installed`，本机 Codex 也成功加载并执行
++`intelligence.py trace`。实际 DNS 返回 `github.com -> 198.18.0.70`，原公开
++地址检查因此在联网前拒绝；没有取回证据。用户确认使用 Clash/Mihomo，Windows
++注册表还保留回环 HTTP 端口提示，但系统 HTTP 代理未启用。不是缺少 Skill。
++
++## 最小修改
++
++- `transport.py`：显式 `local_proxy_url` 只接受无认证的数字回环 HTTP 代理，
++  只让现有明确列出的公共平台代理解析；保留源站 TLS 与每跳 URL 检查。用户
++  指定的回环路线不被 NO_PROXY 排除；托管云端和未知网站路线保持原有检查。
++- `configuration.py`、`service.py`：配置传入有期限的检索 worker；优先级为
++  CLI > 配置路径环境变量 > 用户目录已有 JSON > 内置值，不自动读项目配置。
++- `intelligence.example.json`、Skill 路由参考：登记可选设置和代理信任限制。
++- 独立 Windows 修复器：对五个公开文件校验原/新 SHA256，备份、原子更新与
++  失败回滚；真实 GitHub HTTPS 成功后才保存代理。再做有预算的真实溯源，
++  不发送消息、不启用任务、不修改系统代理、Clash 配置或历史数据库。
++
++修复包的原文件哈希已经和之前实际发布的完整 Windows ZIP 逐一匹配。不同
++版本/自定义文件会拒绝替换；全量安装器另有完整备份。后续相同修复幂等。
++
++## 已验证与待验证
++
++模拟网络测试明确覆盖 Fake-IP、显式代理、安全边界、worker 参数、TLS/SNI、
++私有跳转、NO_PROXY，以及代理成功但溯源只恢复旧证据时不能宣称新验证成功。
++文件测试实际在临时目录执行版本检查、备份、配置保留、失败回滚与重复修复。
++定向回归 241 项通过；另一次独立复查的 110 项代理/修复/来源检查通过。
++最终完整回归执行 `uv run pytest -o addopts='' -q`：6409 项通过、11 项跳过、
++205 个 subtests 通过，591.88 秒。没有将旧的覆盖率结果作为本次新测量。
++
++小修复 ZIP 已在隔离临时目录从旧发布包升级，校验五个原文件、五个新文件和
++备份，再次修复幂等。CMD 使用 CRLF；包里不含私有 `.env`、数据库或会话记录。
++
++修改后的代码也完成一次**真实云端** GitHub 溯源：8 次操作、4 个节点、4 份
++资源与 4 条证据、9.873 秒，探索深度 1；预算为 30 秒/8 次操作/4 个节点。
++云端 GitHub API 被既定网络策略拒绝，因此报告保持 `unverified_origin` 与
++`hold`，没有伪造作者、版本或突破判断。云端的受管代理不等于 Windows Clash。
++
++Windows Skill 安装本身已由用户实机确认。**本次修复后的 Windows 真实代理
++连接仍待用户运行修复器验证**。只有最终步骤取回当前资源和当前证据才输出
++`external_trace_verified`；历史证据不能使失败的刷新显示成功。未配置机器人
++目标或凭据，真实消息发送没有在本次网络修复中验证。
++
++运行和恢复步骤见 `deploy/intelligence/修复说明.md`；结构化清单见
++`docs/source-intelligence-clash-verification.json`。模拟结果不充作 Windows
++真实网络证据。
+diff --git a/docs/source-intelligence-clash-verification.json b/docs/source-intelligence-clash-verification.json
+new file mode 100644
+index 0000000..b2cc57e
+--- /dev/null
++++ b/docs/source-intelligence-clash-verification.json
+@@ -0,0 +1,52 @@
++{
++  "date_utc": "2026-10-12",
++  "base_commit": "fbb686156736ce7963828d9dab8916e139a22e2f",
++  "full_regression": {
++    "command": "uv run pytest -o addopts='' -q",
++    "passed": 6409,
++    "skipped": 11,
++    "subtests_passed": 205,
++    "seconds": 591.88,
++    "exit_code": 0,
++    "network_mode": "offline fixtures and guarded subprocesses"
++  },
++  "focused_regression": {"passed": 241},
++  "independent_review": {"passed": 110, "remaining_blockers": 0},
++  "repair_zip": {
++    "bytes": 25050,
++    "sha256": "5ebe122888d3b904af1598821de9a4ed023badf95228cc585f437912c85773d4",
++    "public_files_updated": 5,
++    "original_hashes_match_previously_published_zip": true,
++    "isolated_upgrade_backup_and_idempotence": "passed",
++    "failed_write_rollback": "passed",
++    "private_config_and_database_included": false
++  },
++  "full_installer_zip": {
++    "bytes": 15789858,
++    "sha256": "ef222ecf822766ccc394ffabda75debbd19d2a987f462f9dae686c7b76869400",
++    "files": 797,
++    "isolated_install_and_idempotence": "passed",
++    "cli_startup_without_system_timezone_database": "passed"
++  },
++  "real_cloud_trace": {
++    "url": "https://github.com/mvanhorn/last30days-skill",
++    "real_external": true,
++    "operations": 8,
++    "nodes": 4,
++    "resources": 4,
++    "evidence": 4,
++    "cache_hits": 0,
++    "seconds": 9.873,
++    "max_depth": 1,
++    "max_seconds": 30,
++    "verification_status": "unverified_origin",
++    "tier": "hold",
++    "limitation": "GitHub API denied by existing managed HTTP allowlist; HTML retrieval succeeded; source metadata stays unknown"
++  },
++  "real_windows": {
++    "original_skill_install_and_loading": "confirmed by user screenshot and referenced local test",
++    "proxy_kind": "Clash / Clash Verge / Mihomo confirmed by user",
++    "repaired_clash_connectivity": "not yet verified; requires running the repair helper on the Windows machine",
++    "notifications_sent": false
++  }
++}
 diff --git a/docs/source-intelligence-live-checks.json b/docs/source-intelligence-live-checks.json
 new file mode 100644
 index 0000000..0a5a611
@@ -1793,10 +2233,10 @@ index 0000000..aac9dcf
 +仍原样保留；测试通过。该测试环境处理不属于产品运行时代码或已部署服务。
 diff --git a/docs/source-intelligence.md b/docs/source-intelligence.md
 new file mode 100644
-index 0000000..512bc1a
+index 0000000..6b5f9d9
 --- /dev/null
 +++ b/docs/source-intelligence.md
-@@ -0,0 +1,406 @@
+@@ -0,0 +1,428 @@
 +# last30days 自主溯源情报 MVP 交接
 +
 +主入口是 `/last30days intelligence ...`。给出一个领域，系统获取 last30days
@@ -1917,7 +2357,9 @@ index 0000000..512bc1a
 +提高 `max_cost_usd` 不会自动启用付费搜索；本 MVP 的上游入口固定保持免费模式。
 +
 +全局 CLI 选项必须位于子命令之前。配置文件路径选择 `--config` 优先于
-+`LAST30DAYS_INTEL_CONFIG`。数据库/报告目录选择 CLI 参数 > 进程环境变量 >
++`LAST30DAYS_INTEL_CONFIG`，然后尝试用户目录已有的
++`~/.config/last30days/intelligence.json`，否则使用内置默认值；不会自动加载项目目录
++同名配置。数据库/报告目录选择 CLI 参数 > 进程环境变量 >
 +显式 env-file > JSON > 内置默认。`--env-file` 使用上游 `load_env_file`，只补充
 +进程中未设置的变量；文件作为数据解析，绝不能 `source` 或整份打印。
 +路径中的 `~` 会展开，JSON/dotenv 的 `$HOME` 不会执行 shell 展开。
@@ -1927,6 +2369,26 @@ index 0000000..512bc1a
 +versions、edges、events、aliases、observations、revisions、sources、runs、watches、
 +event_merges、source_domains、outbox、delivery_log 与 delivery_rate_limits；原有研究库仍然可用。
 +情报模式自行保存历史，不需要原研究的 `--store` 开关。
++
++### Windows Clash / Mihomo Fake-IP
++
++如果 GitHub 被本机 DNS 解析为 `198.18.*`，原始地址检查会拒绝这个保留地址。
++这不表示 Skill 没有安装。已确认使用 Clash 的本机可以在私有 JSON 中显式配置
++`"local_proxy_url": "http://127.0.0.1:7897"`，其中端口必须以自己的 HTTP/mixed
++端口为准；7897 只是常见端口，不保证已监听。只支持无认证的数字回环 HTTP
++代理；SOCKS、远程主机和含凭据 URL 都不接受。
++
++这种模式仅让现有明确列出的公共平台由代理解析 DNS，未知网站仍保留公开地址
++检查，HTTPS 仍检查源站证书，托管云端策略不能被此设置覆盖。证据的 retrieval
++字段会明确记录 `delegated_to_trusted_local_proxy` 和本机未验证远程地址。
++
++专用 `last30days-clash-repair.zip` 可直接解压并双击 `Repair-Clash.cmd`：先校验并
++备份支持版本的修改文件，再从 Windows 代理端口提示和常见本机端口中最多尝试
++4 个候选。每个候选有 15 秒期限，实际通过 GitHub HTTPS 后才保存配置。随后
++执行不超过 60 秒、12 次操作、5 个节点、1 层探索的真实溯源；可能保留部分来源
++访问失败。程序不修改系统/Clash 设置、不读取订阅、不发送消息；已有配置的
++其他字段和数据库保留。可从终端通过 `Repair-Clash.cmd --proxy
++http://127.0.0.1:实际端口` 显式指定端口。窗口结果只能代表运行它的那台电脑。
 +
 +## 4. 环境变量样例
 +
@@ -2449,10 +2911,10 @@ index 0000000..53eb92c
 +# Intelligence always disables browser-cookie extraction and paid-provider fallback.
 diff --git a/skills/last30days/intelligence.example.json b/skills/last30days/intelligence.example.json
 new file mode 100644
-index 0000000..0cdabfc
+index 0000000..0f663f6
 --- /dev/null
 +++ b/skills/last30days/intelligence.example.json
-@@ -0,0 +1,33 @@
+@@ -0,0 +1,34 @@
 +{
 +  "limits": {
 +    "max_depth": 2,
@@ -2483,15 +2945,16 @@ index 0000000..0cdabfc
 +  "timezone": "Asia/Shanghai",
 +  "min_delivery_interval_seconds": 1,
 +  "source_check_interval_seconds": 3600,
++  "local_proxy_url": null,
 +  "db": "~/.local/share/last30days/research.db",
 +  "report_dir": "~/.local/share/last30days/intelligence/reports"
 +}
 diff --git a/skills/last30days/references/intelligence.md b/skills/last30days/references/intelligence.md
 new file mode 100644
-index 0000000..c07512f
+index 0000000..31aae62
 --- /dev/null
 +++ b/skills/last30days/references/intelligence.md
-@@ -0,0 +1,142 @@
+@@ -0,0 +1,152 @@
 +# Evidence-led source intelligence
 +
 +Load this reference for `/last30days intelligence ...` or an explicit request for
@@ -2564,6 +3027,16 @@ index 0000000..c07512f
 +dump its contents, or save delivery credentials/secret endpoints in JSON reports
 +or SQLite settings. JSON example settings live at `intelligence.example.json`;
 +private environment template at `intelligence.env.example`.
++
++Settings-file selection is `--config` > `LAST30DAYS_INTEL_CONFIG` > the existing
++trusted `~/.config/last30days/intelligence.json` > built-in defaults. Never load
++a same-named file from an untrusted project automatically. On a user-confirmed
++Clash/Mihomo Fake-IP network, the private JSON may explicitly set
++`local_proxy_url` to its numeric-loopback HTTP/mixed port. Only exact known
++public provider hosts delegate DNS; other hosts retain public DNS checks.
++Origin TLS verification stays enabled and delegated address validation is
++recorded. Do not treat Fake-IP addresses as public, disable safety checks,
++or use this setting to override a managed environment's network policy.
 +
 +Preview is the default. Add `--send` only when the user requested delivery to the
 +configured destination or already authorized that scheduled workflow. Existing
@@ -2966,10 +3439,10 @@ index 0000000..41dec4e
 +    report["analysis"]["agent_insights"] = insights
 diff --git a/skills/last30days/scripts/lib/intelligence/configuration.py b/skills/last30days/scripts/lib/intelligence/configuration.py
 new file mode 100644
-index 0000000..11ff58f
+index 0000000..af549f2
 --- /dev/null
 +++ b/skills/last30days/scripts/lib/intelligence/configuration.py
-@@ -0,0 +1,67 @@
+@@ -0,0 +1,73 @@
 +"""Non-secret JSON settings; delivery credentials remain environment-only."""
 +
 +from __future__ import annotations
@@ -2983,6 +3456,7 @@ index 0000000..11ff58f
 +
 +from .analysis import DEFAULT_WEIGHTS
 +from .models import Limits
++from .transport import validate_local_proxy_url
 +
 +ENV_KEYS = frozenset({"LAST30DAYS_INTEL_CONFIG", "LAST30DAYS_INTEL_DB", "LAST30DAYS_INTEL_REPORT_DIR"})
 +
@@ -2993,10 +3467,14 @@ index 0000000..11ff58f
 +                "lookback_days": 30, "max_reports": 4, "cache_seconds": 86400,
 +                "engine_sources": ["reddit", "hackernews"], "channels": [],
 +                "timezone": "Asia/Shanghai", "min_delivery_interval_seconds": 1,
-+                "source_check_interval_seconds": 3600,
++                "source_check_interval_seconds": 3600, "local_proxy_url": None,
 +                "db": str(Path.home() / ".local/share/last30days/research.db"),
 +                "report_dir": str(Path.home() / ".local/share/last30days/intelligence/reports")}
 +    file_path = path or os.environ.get("LAST30DAYS_INTEL_CONFIG")
++    if not file_path:
++        default_file = Path.home() / '.config/last30days/intelligence.json'
++        if default_file.is_file():
++            file_path = str(default_file)
 +    if file_path:
 +        payload = json.loads(Path(file_path).expanduser().read_text(encoding="utf-8"))
 +        if not isinstance(payload, dict) or set(payload) - set(settings):
@@ -3031,6 +3509,7 @@ index 0000000..11ff58f
 +    if not isinstance(settings["engine_sources"], list) or not all(isinstance(item, str) for item in settings["engine_sources"]):
 +        raise ValueError("engine_sources must be a list")
 +    ZoneInfo(settings["timezone"])
++    settings['local_proxy_url'] = validate_local_proxy_url(settings['local_proxy_url'])
 +    for key, variable in (("db", "LAST30DAYS_INTEL_DB"), ("report_dir", "LAST30DAYS_INTEL_REPORT_DIR")):
 +        if os.environ.get(variable):
 +            settings[key] = os.environ[variable]
@@ -4495,10 +4974,10 @@ index 0000000..5e2df01
 +        return self.knowledge.save_report(report, aliases, candidate)
 diff --git a/skills/last30days/scripts/lib/intelligence/service.py b/skills/last30days/scripts/lib/intelligence/service.py
 new file mode 100644
-index 0000000..595db8a
+index 0000000..22af81c
 --- /dev/null
 +++ b/skills/last30days/scripts/lib/intelligence/service.py
-@@ -0,0 +1,230 @@
+@@ -0,0 +1,231 @@
 +"""Discover, preserve, monitor and deliver using the extension's shared state."""
 +
 +from __future__ import annotations
@@ -4523,7 +5002,8 @@ index 0000000..595db8a
 +    def __init__(self, settings: dict, *, resolver=None, engine_fn=None):
 +        if resolver is None:
 +            from .sources import SourceResolver
-+            resolver = SourceResolver()
++            from .transport import PublicTransport
++            resolver = SourceResolver(PublicTransport(local_proxy_url=settings.get('local_proxy_url')))
 +        self.settings = settings
 +        self.knowledge = Knowledge(settings["db"])
 +        self.resolver = resolver
@@ -5407,17 +5887,19 @@ index 0000000..5e3cacb
 +        return unique[:count]
 diff --git a/skills/last30days/scripts/lib/intelligence/transport.py b/skills/last30days/scripts/lib/intelligence/transport.py
 new file mode 100644
-index 0000000..2559d69
+index 0000000..988936d
 --- /dev/null
 +++ b/skills/last30days/scripts/lib/intelligence/transport.py
-@@ -0,0 +1,343 @@
+@@ -0,0 +1,393 @@
 +"""Bounded, unauthenticated HTTPS reads from public destinations.
 +
 +Each hop owns a subprocess deadline covering DNS, TLS and body reads. Normally
 +DNS answers and connections (including a proxy CONNECT) are checked and pinned.
 +In a managed environment that owns DNS, only exact, policy-allowlisted public
 +provider names can delegate address validation to the configured managed proxy.
-+That limitation is recorded. There is no direct or insecure-TLS fallback.
++An explicit loopback HTTP proxy can similarly resolve exact known providers on
++an unmanaged host using Fake-IP DNS. That limitation is recorded. There is no
++direct or insecure-TLS fallback.
 +"""
 +
 +from __future__ import annotations
@@ -5434,6 +5916,7 @@ index 0000000..2559d69
 +import urllib.error
 +import urllib.request
 +from dataclasses import dataclass, field
++from functools import partial
 +from pathlib import Path
 +from urllib.parse import urljoin, urlsplit, urlunsplit
 +
@@ -5535,6 +6018,24 @@ index 0000000..2559d69
 +    return canonical, addresses
 +
 +
++def validate_local_proxy_url(value: str | None) -> str | None:
++    """An explicit user setting may select an unauthenticated loopback HTTP proxy."""
++    if value is None:
++        return None
++    try:
++        parts = urlsplit(value)
++        if (not isinstance(value, str) or any(ord(c) <= 32 for c in value)
++                or parts.scheme != 'http' or parts.hostname not in {'127.0.0.1', '::1'}
++                or parts.username is not None or parts.password is not None
++                or parts.port is None or not 1 <= parts.port <= 65535
++                or parts.path not in {'', '/'} or parts.query or parts.fragment):
++            raise ValueError
++    except (ValueError, TypeError, AttributeError):
++        raise SourceError('configuration', 'local proxy requires loopback HTTP with an explicit port and no credentials') from None
++    authority = f'[{parts.hostname}]' if parts.hostname == '::1' else parts.hostname
++    return f'http://{authority}:{parts.port}'
++
++
 +_CONTENT_TYPES = frozenset({
 +    "text/html", "application/xhtml+xml", "application/json", "application/ld+json",
 +    "application/atom+xml", "application/rss+xml", "application/xml", "text/xml",
@@ -5548,6 +6049,18 @@ index 0000000..2559d69
 +    "gitlab.com", "arxiv.org", "www.arxiv.org", "export.arxiv.org", "doi.org", "dx.doi.org",
 +    "api.crossref.org", "api.openalex.org",
 +})
++
++
++def _local_proxy_route(url: str, value: str | None) -> str | None:
++    proxy = validate_local_proxy_url(value)
++    if proxy is None:
++        return None
++    if _MANAGED_POLICY_PATH.exists():
++        raise SourceError('network_policy', 'local proxy cannot override a managed environment policy')
++    host = urlsplit(canonical_public_url(url)).hostname
++    # Fake-IP DNS is delegated only for exact, known public providers. Unknown
++    # sites retain checked-and-pinned DNS, even with an explicit local proxy.
++    return proxy if host in _PUBLIC_PROVIDER_HOSTS else None
 +
 +
 +def _managed_proxy_route(url: str) -> str | None:
@@ -5600,8 +6113,9 @@ index 0000000..2559d69
 +class PublicTransport:
 +    """One charged operation per hop. Errors and rate limits are not retried."""
 +
-+    def __init__(self, sender=None, *, max_redirects: int = 3):
-+        self.sender = sender or _worker_request
++    def __init__(self, sender=None, *, max_redirects: int = 3, local_proxy_url: str | None = None):
++        self.local_proxy_url = validate_local_proxy_url(local_proxy_url)
++        self.sender = sender or partial(_worker_request, local_proxy_url=self.local_proxy_url)
 +        self.max_redirects = max_redirects
 +
 +    def get(self, url: str, budget: Budget) -> Response:
@@ -5626,7 +6140,7 @@ index 0000000..2559d69
 +        raise SourceError("redirect", "redirect limit exceeded")  # pragma: no cover
 +
 +
-+def _worker_request(url: str, timeout: float, max_bytes: int) -> Response:
++def _worker_request(url: str, timeout: float, max_bytes: int, *, local_proxy_url: str | None = None) -> Response:
 +    deadline = time.monotonic() + timeout
 +    worker_deadline = deadline - 2 * _CLEANUP_GRACE
 +    try:
@@ -5634,7 +6148,8 @@ index 0000000..2559d69
 +            [sys.executable, "-I", str(Path(__file__).resolve())],
 +            timeout=max(0, worker_deadline - time.monotonic()),
 +            deadline_monotonic=worker_deadline,
-+            input_text=json.dumps({"url": url, "timeout": timeout, "max_bytes": max_bytes}),
++            input_text=json.dumps({"url": url, "timeout": timeout, "max_bytes": max_bytes,
++                                   **({'local_proxy_url': local_proxy_url} if local_proxy_url else {})}),
 +            cleanup_grace=_CLEANUP_GRACE,
 +            capture_limit_bytes=2 * max_bytes + 65536,
 +        )
@@ -5686,8 +6201,10 @@ index 0000000..2559d69
 +    return urllib.request.build_opener(PinnedHandler(context=ssl.create_default_context()), _NoRedirect())
 +
 +
-+def _managed_opener(url: str, proxy: str):
++def _managed_opener(url: str, proxy: str, *, force_loopback: bool = False):
 +    origin = urlsplit(url).hostname
++    if force_loopback:
++        proxy = validate_local_proxy_url(proxy)
 +    proxy_parts = urlsplit(proxy)
 +    proxy_port = proxy_parts.port or (443 if proxy_parts.scheme == "https" else 80)
 +
@@ -5701,19 +6218,31 @@ index 0000000..2559d69
 +        def https_open(self, req):
 +            return self.do_open(ManagedConnection, req, context=self._context)
 +
++    class ExplicitLoopbackProxyHandler(urllib.request.ProxyHandler):
++        def proxy_open(self, req, configured_proxy, request_type):
++            # This user-selected numeric-loopback route must not be skipped by
++            # NO_PROXY or Windows proxy exceptions. Only local opt-in uses it.
++            req.set_proxy(urlsplit(configured_proxy).netloc, 'http')
++            return None
++
++    proxy_handler = ExplicitLoopbackProxyHandler if force_loopback else urllib.request.ProxyHandler
 +    return urllib.request.build_opener(
-+        urllib.request.ProxyHandler({"https": proxy}),
++        proxy_handler({"https": proxy}),
 +        ManagedHandler(context=ssl.create_default_context()), _NoRedirect(),
 +    )
 +
 +
-+def _request_once(url: str, timeout: float, max_bytes: int) -> Response:
++def _request_once(url: str, timeout: float, max_bytes: int, *, local_proxy_url: str | None = None) -> Response:
 +    canonical = canonical_public_url(url)
 +    proxy = _managed_proxy_route(canonical)
 +    if proxy:
 +        opener = _managed_opener(canonical, proxy)
 +        retrieval = {"dns_validation": "delegated_to_managed_proxy", "local_address_verified": False,
 +                     "restriction": "exact allowlisted public provider; managed proxy owns resolution"}
++    elif (proxy := _local_proxy_route(canonical, local_proxy_url)):
++        opener = _managed_opener(canonical, proxy, force_loopback=True)
++        retrieval = {'dns_validation': 'delegated_to_trusted_local_proxy', 'local_address_verified': False,
++                     'restriction': 'explicit loopback proxy; exact known public providers; origin TLS verification retained'}
 +    else:
 +        canonical, addresses = validate_public_url(canonical)
 +        opener = _pinned_opener(canonical, addresses)
@@ -5739,7 +6268,8 @@ index 0000000..2559d69
 +def _worker_main() -> None:
 +    try:
 +        payload = json.load(sys.stdin)
-+        result = _request_once(payload["url"], payload["timeout"], payload["max_bytes"])
++        result = _request_once(payload["url"], payload["timeout"], payload["max_bytes"],
++                               local_proxy_url=payload.get('local_proxy_url'))
 +        record = {"url": result.url, "status": result.status, "headers": result.headers, "retrieval": result.retrieval,
 +                  "body": base64.b64encode(result.body).decode("ascii")}
 +    except SourceError as exc:
@@ -7287,6 +7817,343 @@ index 0000000..9d50ac5
 +    assert second['status'] == 'already_installed'
 +    assert second['backup'] is None
 +    assert [p.name for p in root.iterdir()] == ['last30days']
+diff --git a/tests/test_intelligence_local_proxy.py b/tests/test_intelligence_local_proxy.py
+new file mode 100644
+index 0000000..0ea373f
+--- /dev/null
++++ b/tests/test_intelligence_local_proxy.py
+@@ -0,0 +1,160 @@
++"""Simulated Windows Fake-IP/proxy scenarios; no real proxy or search is used."""
++import io
++import json
++import socket
++import ssl
++import urllib.request
++from pathlib import Path
++from types import SimpleNamespace
++
++import pytest
++
++from lib.intelligence import configuration, transport
++from lib.intelligence.models import Budget, Limits
++
++
++def unmanaged(monkeypatch, tmp_path):
++    monkeypatch.setattr(transport, '_MANAGED_POLICY_PATH', tmp_path / 'absent-policy.json')
++    monkeypatch.setattr(transport, '_managed_proxy_route', lambda url: None)
++
++
++def test_simulated_private_profile_config_is_used_without_project_config(monkeypatch, tmp_path):
++    monkeypatch.setattr(Path, 'home', lambda: tmp_path / 'home')
++    monkeypatch.delenv('LAST30DAYS_INTEL_CONFIG', raising=False)
++    private = tmp_path / 'home/.config/last30days/intelligence.json'
++    private.parent.mkdir(parents=True)
++    private.write_text(json.dumps({'local_proxy_url': 'http://127.0.0.1:7897'}))
++    project = tmp_path / 'project'
++    project.mkdir()
++    (project / 'intelligence.json').write_text('{"threshold_a":0}')
++    monkeypatch.chdir(project)
++    cfg = configuration.load_settings()
++    assert cfg['local_proxy_url'] == 'http://127.0.0.1:7897'
++    assert cfg['threshold_a'] == 85
++    explicit = tmp_path / 'explicit.json'
++    explicit.write_text('{"local_proxy_url":null}')
++    assert configuration.load_settings(str(explicit))['local_proxy_url'] is None
++
++
++@pytest.mark.parametrize('url', [
++    'http://proxy.example:7897', 'http://169.254.169.254:80',
++    'http://user:secret@127.0.0.1:7897', 'socks5://127.0.0.1:7897',
++    'http://127.0.0.1:7897/control', 'http://127.0.0.1:7897/?token=secret',
++    'http://127.0.0.1', 'http://127.0.0.1:0',
++])
++def test_simulated_proxy_config_requires_explicit_loopback_http(url, tmp_path):
++    path = tmp_path / 'config.json'
++    path.write_text(json.dumps({'local_proxy_url': url}))
++    with pytest.raises((ValueError, transport.SourceError)):
++        configuration.load_settings(str(path))
++
++
++def test_simulated_local_proxy_retrieval_delegates_fake_dns_and_records_limits(monkeypatch, tmp_path):
++    unmanaged(monkeypatch, tmp_path)
++    monkeypatch.setattr(transport, 'validate_public_url', lambda url: pytest.fail('local fake DNS must not be called'))
++    class Response(io.BytesIO):
++        code = 200
++        headers = {'content-type': 'text/plain'}
++    routes = []
++    monkeypatch.setattr(transport, '_managed_opener', lambda url, proxy, **kw: routes.append((url, proxy)) or SimpleNamespace(open=lambda req, timeout: Response(b'Simulated public evidence')))
++    response = transport._request_once('https://github.com/simulated/repo', 1, 100, local_proxy_url='http://127.0.0.1:7897')
++    assert routes == [('https://github.com/simulated/repo', 'http://127.0.0.1:7897')]
++    assert response.retrieval['dns_validation'] == 'delegated_to_trusted_local_proxy'
++    assert response.retrieval['local_address_verified'] is False
++
++
++def test_simulated_unknown_host_still_rejects_nonpublic_dns_with_local_proxy(monkeypatch, tmp_path):
++    unmanaged(monkeypatch, tmp_path)
++    monkeypatch.setattr(transport.socket, 'getaddrinfo', lambda *a, **kw: [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('198.18.0.70', 443))])
++    with pytest.raises(transport.SourceError, match='nonpublic'):
++        transport._request_once('https://unknown.example/research', 1, 100, local_proxy_url='http://127.0.0.1:7897')
++
++
++def test_simulated_local_proxy_cannot_allow_private_redirects():
++    calls = []
++    def sender(url, timeout, maximum):
++        calls.append(url)
++        return transport.Response(url, 302, {'location': 'https://127.0.0.1/private'}, b'')
++    t = transport.PublicTransport(sender=sender, local_proxy_url='http://127.0.0.1:7897')
++    with pytest.raises(transport.SourceError, match='nonpublic'):
++        t.get('https://github.com/simulated/repo', Budget(Limits()))
++    assert calls == ['https://github.com/simulated/repo']
++
++
++def test_simulated_local_proxy_cannot_override_managed_policy(monkeypatch, tmp_path):
++    unmanaged(monkeypatch, tmp_path)
++    path = tmp_path / 'policy.json'
++    path.write_text('{"version":1}')
++    monkeypatch.setattr(transport, '_MANAGED_POLICY_PATH', path)
++    with pytest.raises(transport.SourceError, match='network_policy'):
++        transport._request_once('https://github.com/simulated/repo', 1, 100, local_proxy_url='http://127.0.0.1:7897')
++
++
++def test_simulated_proxy_option_reaches_bounded_worker_without_leaking_to_evidence(monkeypatch):
++    captured = []
++    def run(command, **kwargs):
++        captured.append(json.loads(kwargs['input_text']))
++        return SimpleNamespace(returncode=0, stdout=json.dumps({'url':'https://github.com/simulated/repo', 'status':200,'headers':{'content-type':'text/plain'},'body':'','retrieval':{}}))
++    monkeypatch.setattr(transport.subproc, 'run_with_timeout', run)
++    t = transport.PublicTransport(local_proxy_url='http://127.0.0.1:7897')
++    result = t.get('https://github.com/simulated/repo', Budget(Limits()))
++    assert captured[0]['local_proxy_url'] == 'http://127.0.0.1:7897'
++    assert '127.0.0.1' not in json.dumps(result.retrieval)
++
++
++def test_simulated_loopback_connect_retains_origin_certificate_validation():
++    opener = transport._managed_opener('https://github.com/simulated/repo', 'http://127.0.0.1:7897')
++    handler = next(h for h in opener.handlers if isinstance(h, urllib.request.HTTPSHandler))
++    assert handler._context.check_hostname is True
++    assert handler._context.verify_mode == ssl.CERT_REQUIRED
++    captured = {}
++    handler.do_open = lambda connection, request, context: captured.setdefault('type', connection)
++    handler.https_open(urllib.request.Request('https://github.com/simulated/repo'))
++    connection = captured['type']('127.0.0.1:7897', context=handler._context)
++    connection.set_tunnel('github.com', 443)
++    def fake_socket(address, timeout, source):
++        captured['connection'] = address
++        return SimpleNamespace(setsockopt=lambda *args: None)
++    connection._create_connection = fake_socket
++    connection._tunnel = lambda: captured.setdefault('tunnel', connection._tunnel_host)
++    connection._context = SimpleNamespace(wrap_socket=lambda sock, server_hostname: captured.setdefault('sni', server_hostname))
++    connection.connect()
++    assert captured['connection'] == ('127.0.0.1', 7897)
++    assert captured['tunnel'] == 'github.com'
++    assert captured['sni'] == 'github.com'
++    connection = captured['type']('127.0.0.1:7897', context=handler._context)
++    connection.set_tunnel('private.example', 443)
++    with pytest.raises(transport.SourceError, match='configured proxy tunnel'):
++        connection.connect()
++
++
++def test_private_proxy_profile_is_applied_to_service_transport(tmp_path):
++    from lib.intelligence.service import IntelligenceService
++    profile = tmp_path / 'private.json'
++    profile.write_text(json.dumps({'local_proxy_url': 'http://127.0.0.1:7897',
++                                  'db': str(tmp_path / 'research.db'), 'report_dir': str(tmp_path / 'reports')}))
++    service = IntelligenceService(configuration.load_settings(str(profile)))
++    assert service.resolver.transport.local_proxy_url == 'http://127.0.0.1:7897'
++
++
++def test_simulated_explicit_local_proxy_reaches_selected_tunnel_despite_no_proxy(monkeypatch, tmp_path):
++    unmanaged(monkeypatch, tmp_path)
++    monkeypatch.setattr(urllib.request, 'proxy_bypass', lambda host: True)
++    captured = []
++    monkeypatch.setattr(transport.http.client.HTTPSConnection, 'connect',
++                        lambda self: captured.append((self.host, self.port, self._tunnel_host)))
++    class SimulatedResponse(io.BytesIO):
++        code, msg = 200, 'OK'
++        headers = {'content-type': 'text/plain'}
++        def info(self):
++            return self.headers
++    def open_connection(handler, connection_type, request, context):
++        connection = connection_type(request.host, context=context)
++        if request._tunnel_host:
++            connection.set_tunnel(request._tunnel_host, 443)
++        connection.connect()
++        return SimulatedResponse(b'Simulated evidence through the explicit proxy')
++    monkeypatch.setattr(urllib.request.HTTPSHandler, 'do_open', open_connection)
++    result = transport._request_once('https://github.com/simulated/repo', 1, 100, local_proxy_url='http://127.0.0.1:7897')
++    assert result.retrieval['dns_validation'] == 'delegated_to_trusted_local_proxy'
++    assert captured == [('127.0.0.1', 7897, 'github.com')]
+diff --git a/tests/test_intelligence_network_repair.py b/tests/test_intelligence_network_repair.py
+new file mode 100644
+index 0000000..062beb2
+--- /dev/null
++++ b/tests/test_intelligence_network_repair.py
+@@ -0,0 +1,165 @@
++"""Simulated proxy checks and real temporary-filesystem upgrade checks.
++
++No Windows registry, external website or notification service is contacted.
++"""
++import hashlib
++import importlib.util
++import json
++import sys
++from pathlib import Path
++from types import SimpleNamespace
++
++import pytest
++
++
++def repair_module():
++    path = Path(__file__).resolve().parents[1] / 'deploy/intelligence/repair_clash.py'
++    assert path.is_file(), 'The standalone Clash repair helper is not implemented'
++    spec = importlib.util.spec_from_file_location('intel_network_repair', path)
++    module = importlib.util.module_from_spec(spec)
++    spec.loader.exec_module(module)
++    return module
++
++
++def package(tmp_path):
++    source = tmp_path / 'payload'
++    installed = tmp_path / 'home/.agents/skills/last30days'
++    files = {}
++    for name in ('transport', 'configuration', 'service'):
++        relative = f'scripts/lib/intelligence/{name}.py'
++        old, new = b'VERSION = "before"\n', b'VERSION = "after"\n'
++        for root, content in ((source, new), (installed, old)):
++            path = root / relative
++            path.parent.mkdir(parents=True, exist_ok=True)
++            path.write_bytes(content)
++        files[relative] = {'before': hashlib.sha256(old).hexdigest(), 'after': hashlib.sha256(new).hexdigest()}
++    (source / 'manifest.json').write_text(json.dumps({'format': 1, 'files': files}))
++    return source, installed
++
++
++def test_repair_updates_and_backs_up_only_expected_files(tmp_path):
++    source, installed = package(tmp_path)
++    personal = installed.parent.parent.parent / '.config/last30days/private.env'
++    personal.parent.mkdir(parents=True)
++    personal.write_text('Unrelated private configuration')
++    (installed / 'custom.txt').write_text('keep customization')
++    result = repair_module().update_skill(source, installed)
++    assert result['status'] == 'updated'
++    assert (installed / 'scripts/lib/intelligence/transport.py').read_text() == 'VERSION = "after"\n'
++    assert (Path(result['backup']) / 'scripts/lib/intelligence/transport.py').read_text() == 'VERSION = "before"\n'
++    assert (installed / 'custom.txt').read_text() == 'keep customization'
++    assert personal.read_text() == 'Unrelated private configuration'
++
++
++def test_repair_is_idempotent(tmp_path):
++    source, installed = package(tmp_path)
++    repair = repair_module()
++    first = repair.update_skill(source, installed)
++    assert repair.update_skill(source, installed) == {'status': 'already_updated', 'backup': None}
++    assert [p.name for p in installed.parent.iterdir() if 'network-backup' in p.name] == [Path(first['backup']).name]
++
++
++@pytest.mark.parametrize('change', ['customized', 'corrupt_payload', 'path_escape', 'symlink_parent'])
++def test_repair_rejects_unsafe_or_unexpected_files_before_any_change(change, tmp_path):
++    source, installed = package(tmp_path)
++    if change == 'customized':
++        (installed / 'scripts/lib/intelligence/service.py').write_text('CUSTOM = True')
++    elif change == 'corrupt_payload':
++        (source / 'scripts/lib/intelligence/service.py').write_text('corrupt')
++    elif change == 'path_escape':
++        manifest = json.loads((source / 'manifest.json').read_text())
++        manifest['files']['../outside.py'] = next(iter(manifest['files'].values()))
++        (source / 'manifest.json').write_text(json.dumps(manifest))
++    else:
++        real = tmp_path / 'outside'
++        (installed / 'scripts/lib').rename(real)
++        (installed / 'scripts/lib').symlink_to(real, target_is_directory=True)
++    with pytest.raises(ValueError):
++        repair_module().update_skill(source, installed)
++    assert (installed / 'scripts/lib/intelligence/transport.py').read_text() == 'VERSION = "before"\n'
++    assert not list(installed.parent.glob('.last30days-network-backup-*'))
++
++
++def test_repair_restores_replaced_files_if_upgrade_fails(monkeypatch, tmp_path):
++    source, installed = package(tmp_path)
++    repair = repair_module()
++    replace = repair.os.replace
++    failed = False
++    def fail_once(old, new):
++        nonlocal failed
++        if Path(new).name == 'service.py' and not failed:
++            failed = True
++            raise OSError('simulated disk failure')
++        return replace(old, new)
++    monkeypatch.setattr(repair.os, 'replace', fail_once)
++    with pytest.raises(OSError):
++        repair.update_skill(source, installed)
++    for name in ('transport', 'configuration', 'service'):
++        assert (installed / f'scripts/lib/intelligence/{name}.py').read_text() == 'VERSION = "before"\n'
++
++
++def test_proxy_setting_is_saved_only_after_verified_probe_and_preserves_settings(tmp_path):
++    profile = tmp_path / 'intelligence.json'
++    original = {'threshold_a': 92, 'limits': {'max_calls': 8}, 'timezone': 'Asia/Shanghai'}
++    profile.write_text(json.dumps(original))
++    result = repair_module().configure_proxy(profile, 'http://127.0.0.1:7897', probe=lambda url: True)
++    assert json.loads(profile.read_text()) == {**original, 'local_proxy_url': 'http://127.0.0.1:7897'}
++    assert json.loads(Path(result['backup']).read_text()) == original
++
++
++@pytest.mark.parametrize('failure', ['false', 'exception'])
++def test_failed_proxy_check_cannot_overwrite_profile(failure, tmp_path):
++    profile = tmp_path / 'intelligence.json'
++    profile.write_text('{"threshold_a":92}')
++    def probe(url):
++        if failure == 'exception':
++            raise TimeoutError('simulated proxy timeout')
++        return False
++    with pytest.raises((ValueError, TimeoutError)):
++        repair_module().configure_proxy(profile, 'http://127.0.0.1:7897', probe=probe)
++    assert profile.read_text() == '{"threshold_a":92}'
++    assert [p.name for p in tmp_path.iterdir()] == ['intelligence.json']
++
++
++def test_invalid_proxy_never_reaches_probe_or_writes_config(tmp_path):
++    calls = []
++    with pytest.raises(ValueError):
++        repair_module().configure_proxy(tmp_path / 'new.json', 'http://remote.example:7897', probe=lambda url: calls.append(url))
++    assert calls == []
++    assert list(tmp_path.iterdir()) == []
++
++
++def test_registry_hint_uses_only_loopback_proxy_endpoints():
++    repair = repair_module()
++    assert repair.proxy_candidates('http=127.0.0.1:7897;https=127.0.0.1:7897')[0] == 'http://127.0.0.1:7897'
++    candidates = repair.proxy_candidates('http=user:secret@remote.example:8000')
++    assert candidates == ['http://127.0.0.1:7897', 'http://127.0.0.1:7890']
++
++
++@pytest.mark.parametrize('historical, expected', [(False, 0), (True, 3)])
++def test_successful_proxy_probe_cannot_mislabel_failed_trace_with_old_evidence(historical, expected, monkeypatch, tmp_path, capsys):
++    from lib.intelligence import service
++    repair = repair_module()
++    source, installed = package(tmp_path)
++    profile = tmp_path / 'intelligence.json'
++    profile.write_text('{"threshold_a":92}')
++    freshness = 'historical_not_revalidated' if historical else 'retrieved_or_cached'
++    simulated_report = {
++        'resources': [{'url': repair.PROBE_URL, 'metadata': {'freshness_status': freshness}}],
++        'evidence': [{'url': repair.PROBE_URL, 'freshness_status': freshness}],
++        'verification_status': 'historical_primary_evidence; current_check_failed' if historical else 'primary_material_retrieved',
++        'report_path': str(tmp_path / 'simulated.json'), 'markdown_path': str(tmp_path / 'simulated.md'),
++        'failures': [{'url': repair.PROBE_URL, 'status': 'timeout'}] if historical else [],
++    }
++    captured = []
++    def trace(url, refresh):
++        captured.append((url, refresh))
++        return simulated_report
++    monkeypatch.setattr(service, 'IntelligenceService', lambda settings: SimpleNamespace(trace=trace))
++    monkeypatch.setattr(repair, 'probe_proxy', lambda url: True)
++    monkeypatch.setattr(sys, 'argv', ['repair_clash.py', '--payload', str(source), '--skill-dir', str(installed),
++                                     '--config', str(profile), '--proxy', 'http://127.0.0.1:7897'])
++    assert repair.main() == expected
++    output = capsys.readouterr().out
++    assert ('external_trace_verified' in output) is not historical
++    assert captured == [(repair.PROBE_URL, True)]
 diff --git a/tests/test_intelligence_sources.py b/tests/test_intelligence_sources.py
 new file mode 100644
 index 0000000..b6a617b
@@ -7955,6 +8822,3 @@ index 0000000..b6a617b
 +                ("https://github.com/simulated-lab", "organization", "github-api:/organization/html_url")} if with_urls else set()
 +    assert edges == expected
 +    assert doc.metadata["identity_verified"] is False
--- 
-2.52.0
-

@@ -1,0 +1,52 @@
+{
+  "date_utc": "2026-10-12",
+  "base_commit": "fbb686156736ce7963828d9dab8916e139a22e2f",
+  "full_regression": {
+    "command": "uv run pytest -o addopts='' -q",
+    "passed": 6409,
+    "skipped": 11,
+    "subtests_passed": 205,
+    "seconds": 591.88,
+    "exit_code": 0,
+    "network_mode": "offline fixtures and guarded subprocesses"
+  },
+  "focused_regression": {"passed": 241},
+  "independent_review": {"passed": 110, "remaining_blockers": 0},
+  "repair_zip": {
+    "bytes": 25050,
+    "sha256": "5ebe122888d3b904af1598821de9a4ed023badf95228cc585f437912c85773d4",
+    "public_files_updated": 5,
+    "original_hashes_match_previously_published_zip": true,
+    "isolated_upgrade_backup_and_idempotence": "passed",
+    "failed_write_rollback": "passed",
+    "private_config_and_database_included": false
+  },
+  "full_installer_zip": {
+    "bytes": 15789858,
+    "sha256": "ef222ecf822766ccc394ffabda75debbd19d2a987f462f9dae686c7b76869400",
+    "files": 797,
+    "isolated_install_and_idempotence": "passed",
+    "cli_startup_without_system_timezone_database": "passed"
+  },
+  "real_cloud_trace": {
+    "url": "https://github.com/mvanhorn/last30days-skill",
+    "real_external": true,
+    "operations": 8,
+    "nodes": 4,
+    "resources": 4,
+    "evidence": 4,
+    "cache_hits": 0,
+    "seconds": 9.873,
+    "max_depth": 1,
+    "max_seconds": 30,
+    "verification_status": "unverified_origin",
+    "tier": "hold",
+    "limitation": "GitHub API denied by existing managed HTTP allowlist; HTML retrieval succeeded; source metadata stays unknown"
+  },
+  "real_windows": {
+    "original_skill_install_and_loading": "confirmed by user screenshot and referenced local test",
+    "proxy_kind": "Clash / Clash Verge / Mihomo confirmed by user",
+    "repaired_clash_connectivity": "not yet verified; requires running the repair helper on the Windows machine",
+    "notifications_sent": false
+  }
+}
