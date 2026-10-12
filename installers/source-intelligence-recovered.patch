@@ -1038,10 +1038,10 @@ index 0000000..9ee3e45
 +8. 真实外部检索和真实发送单独记录；缺网络授权/凭据时不宣称外部链路已验证。
 diff --git a/docs/source-intelligence-clash-repair.md b/docs/source-intelligence-clash-repair.md
 new file mode 100644
-index 0000000..3a069f9
+index 0000000..76982c6
 --- /dev/null
 +++ b/docs/source-intelligence-clash-repair.md
-@@ -0,0 +1,51 @@
+@@ -0,0 +1,54 @@
 +# Windows Clash Fake-IP 修复与验证
 +
 +日期：2026-10-12。修复基于恢复源码提交 `fbb6861`，不改上游版本号。
@@ -1085,20 +1085,23 @@ index 0000000..3a069f9
 +云端 GitHub API 被既定网络策略拒绝，因此报告保持 `unverified_origin` 与
 +`hold`，没有伪造作者、版本或突破判断。云端的受管代理不等于 Windows Clash。
 +
-+Windows Skill 安装本身已由用户实机确认。**本次修复后的 Windows 真实代理
-+连接仍待用户运行修复器验证**。只有最终步骤取回当前资源和当前证据才输出
-+`external_trace_verified`；历史证据不能使失败的刷新显示成功。未配置机器人
-+目标或凭据，真实消息发送没有在本次网络修复中验证。
++Windows Skill 安装本身已由用户实机确认。用户随后提供的真实 Windows 修复器
++终端输出也确认代理配置已保存、`external_trace_verified`、4 份资源和 4 条证据，
++状态为 `primary_material_retrieved; experiments_not_independently_verified`。
++部分关联资料仍有 GitHub HTTP 403，另一个链接因预算耗尽停止探索；完整性限制
++保留在报告中。此次记录依据用户提供的实机输出，云端没有独立读取 Windows
++报告文件。历史证据不能使失败的刷新显示成功。未配置机器人目标或凭据，
++真实消息发送没有在本次网络修复中验证。
 +
 +运行和恢复步骤见 `deploy/intelligence/修复说明.md`；结构化清单见
 +`docs/source-intelligence-clash-verification.json`。模拟结果不充作 Windows
 +真实网络证据。
 diff --git a/docs/source-intelligence-clash-verification.json b/docs/source-intelligence-clash-verification.json
 new file mode 100644
-index 0000000..b2cc57e
+index 0000000..9c06c7f
 --- /dev/null
 +++ b/docs/source-intelligence-clash-verification.json
-@@ -0,0 +1,52 @@
+@@ -0,0 +1,63 @@
 +{
 +  "date_utc": "2026-10-12",
 +  "base_commit": "fbb686156736ce7963828d9dab8916e139a22e2f",
@@ -1147,7 +1150,18 @@ index 0000000..b2cc57e
 +  "real_windows": {
 +    "original_skill_install_and_loading": "confirmed by user screenshot and referenced local test",
 +    "proxy_kind": "Clash / Clash Verge / Mihomo confirmed by user",
-+    "repaired_clash_connectivity": "not yet verified; requires running the repair helper on the Windows machine",
++    "repaired_clash_connectivity": "confirmed by user-supplied Windows repair-helper terminal output",
++    "verification_basis": "User supplied actual terminal output; the cloud agent has not independently read the Windows report files",
++    "status": "external_trace_verified",
++    "resources": 4,
++    "evidence": 4,
++    "verification_status": "primary_material_retrieved; experiments_not_independently_verified",
++    "source_failures": [
++      {"source": "github_release", "status": 403, "url": "https://github.com/vercel-labs/skills"},
++      {"source": "github_readme", "status": 403, "url": "https://github.com/vercel-labs/skills"},
++      {"source": "github_api", "status": 403, "url": "https://github.com/Xquik-dev/tweetclaw"},
++      {"status": "budget_exhausted", "url": "https://github.com/mvanhorn/last30days-skill.git"}
++    ],
 +    "notifications_sent": false
 +  }
 +}

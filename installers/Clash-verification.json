@@ -46,7 +46,18 @@
   "real_windows": {
     "original_skill_install_and_loading": "confirmed by user screenshot and referenced local test",
     "proxy_kind": "Clash / Clash Verge / Mihomo confirmed by user",
-    "repaired_clash_connectivity": "not yet verified; requires running the repair helper on the Windows machine",
+    "repaired_clash_connectivity": "confirmed by user-supplied Windows repair-helper terminal output",
+    "verification_basis": "User supplied actual terminal output; the cloud agent has not independently read the Windows report files",
+    "status": "external_trace_verified",
+    "resources": 4,
+    "evidence": 4,
+    "verification_status": "primary_material_retrieved; experiments_not_independently_verified",
+    "source_failures": [
+      {"source": "github_release", "status": 403, "url": "https://github.com/vercel-labs/skills"},
+      {"source": "github_readme", "status": 403, "url": "https://github.com/vercel-labs/skills"},
+      {"source": "github_api", "status": 403, "url": "https://github.com/Xquik-dev/tweetclaw"},
+      {"status": "budget_exhausted", "url": "https://github.com/mvanhorn/last30days-skill.git"}
+    ],
     "notifications_sent": false
   }
 }
