@@ -1,0 +1,2 @@
+# Stored patches retain their own diff-context and signature whitespace.
+installers/*.patch -whitespace
