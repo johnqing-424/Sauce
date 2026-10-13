@@ -1,0 +1,182 @@
+{
+  "schema_version": "native-final-validation/1",
+  "status": "passed",
+  "mode": "Replay of genuine earlier Codex native retrieval; no new external requests",
+  "original_native_attempts": 25,
+  "original_search_queries": 6,
+  "candidate_pool": 20,
+  "analysis_fields": 18,
+  "exact_citations": 24,
+  "findings": [
+    {
+      "url": "https://github.com/benchflow-ai/skillsbench",
+      "id": "intel-2a02efab2f63940b501b",
+      "tier": "hold",
+      "value_proxy": 57.75,
+      "analysis_fields": 6,
+      "read_relationships": [
+        {
+          "source": "https://github.com/benchflow-ai/skillsbench",
+          "target": "https://github.com/benchflow-ai/skillsbench/blob/main/CONTRIBUTING.md",
+          "relation": "documentation"
+        },
+        {
+          "source": "https://github.com/benchflow-ai/skillsbench/blob/main/CONTRIBUTING.md",
+          "target": "https://github.com/benchflow-ai/skillsbench",
+          "relation": "code"
+        },
+        {
+          "source": "https://github.com/benchflow-ai/skillsbench/blob/main/README.md",
+          "target": "https://github.com/benchflow-ai/skillsbench",
+          "relation": "code"
+        },
+        {
+          "source": "https://github.com/benchflow-ai/skillsbench/blob/main/README.md",
+          "target": "https://github.com/benchflow-ai/skillsbench/blob/main/CONTRIBUTING.md",
+          "relation": "documentation"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/tzbkk/originblame",
+      "id": "intel-15a0fb365c6c06275e28",
+      "tier": "hold",
+      "value_proxy": 57.75,
+      "analysis_fields": 6,
+      "read_relationships": [
+        {
+          "source": "https://github.com/tzbkk/originblame",
+          "target": "https://arxiv.org/abs/2607.13037",
+          "relation": "paper"
+        },
+        {
+          "source": "https://github.com/tzbkk/originblame/blob/master/README.md",
+          "target": "https://arxiv.org/abs/2607.13037",
+          "relation": "paper"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/xishi404/kvshare-arena",
+      "id": "intel-8c2f67a8a777f0df8440",
+      "tier": "B",
+      "value_proxy": 60.75,
+      "analysis_fields": 6,
+      "read_relationships": [
+        {
+          "source": "https://github.com/xishi404/KVShare-Arena",
+          "target": "https://arxiv.org/abs/2609.10266",
+          "relation": "paper"
+        },
+        {
+          "source": "https://github.com/xishi404/KVShare-Arena",
+          "target": "https://github.com/xishi404/KVShare-Arena/blob/main/docs/benchmark.md",
+          "relation": "documentation"
+        },
+        {
+          "source": "https://github.com/xishi404/KVShare-Arena",
+          "target": "https://github.com/xishi404/KVShare-Arena/blob/main/data/queryset/README.md",
+          "relation": "documentation"
+        },
+        {
+          "source": "https://github.com/xishi404/KVShare-Arena/blob/main/README.md",
+          "target": "https://arxiv.org/abs/2609.10266",
+          "relation": "paper"
+        },
+        {
+          "source": "https://github.com/xishi404/KVShare-Arena/blob/main/README.md",
+          "target": "https://github.com/xishi404/KVShare-Arena/blob/main/docs/benchmark.md",
+          "relation": "documentation"
+        },
+        {
+          "source": "https://github.com/xishi404/KVShare-Arena/blob/main/README.md",
+          "target": "https://github.com/xishi404/KVShare-Arena/blob/main/data/queryset/README.md",
+          "relation": "documentation"
+        }
+      ]
+    }
+  ],
+  "database_counts": {
+    "intel_events": 3,
+    "intel_revisions": 3,
+    "intel_outbox": 0,
+    "intel_delivery_log": 0
+  },
+  "review_retained_and_deduped": true,
+  "full_report_links_exist": true,
+  "replay_budget": {
+    "operations": 20,
+    "resource_nodes": 17,
+    "cost_usd": 0.0,
+    "elapsed_seconds": 1.108,
+    "limits": {
+      "max_depth": 1,
+      "max_calls": 30,
+      "max_nodes": 25,
+      "max_seconds": 60,
+      "max_cost_usd": 0,
+      "request_timeout": 8,
+      "max_bytes": 1048576
+    }
+  },
+  "replay_external_requests": 0,
+  "notifications_sent": 0,
+  "windows_runtime_verified": false,
+  "experiments_reproduced": false,
+  "brief_markdown": "研究简报.md",
+  "limitations": [
+    "Original community retrieval returned proxy 403; one native material returned 404.",
+    "The initial submission failed and was repaired using the same genuine source snapshots.",
+    "The original total wall time exceeded its initial 10-minute round target.",
+    "Two older resources are retained as hold/background; document scores are not value rankings.",
+    "Depth 1 leaves observed links pending; native snapshots do not independently establish HTTP/DNS/TLS or author identity.",
+    "Windows execution, live robot delivery and unattended semantic-agent scheduling remain unverified."
+  ],
+  "source_commit": "8b122d47e60e2889080bd1c3393e0487fe0b9eac",
+  "full_regression": {
+    "passed": 6601,
+    "skipped": 11,
+    "subtests_passed": 205,
+    "seconds": 619.26,
+    "new_native_regressions_passed": 21
+  },
+  "original_trial": {
+    "budget": {
+      "start": "2026-10-13T03:40:53Z",
+      "deadline": "2026-10-13T03:50:53Z",
+      "max_seconds": 600,
+      "max_host_attempts_plus_cli_operations": 40
+    },
+    "external_research_end": "2026-10-13T03:49:08Z",
+    "counts": {
+      "native_tool_attempts": 25,
+      "search_tool_attempts": 4,
+      "search_queries": 6,
+      "native_read_attempts": 21,
+      "native_read_failures": 1,
+      "cli_invocations": 5,
+      "cli_help_invocations": 3,
+      "cli_processing_operations": 4,
+      "total_host_attempts_plus_cli_invocations": 30,
+      "total_with_internal_cli_processing_operations": 32
+    },
+    "cost": {
+      "reported_cli_cost_usd": 0,
+      "paid_provider_api_invocations": 0,
+      "connector_billing": "unknown"
+    },
+    "elapsed_wall_seconds": 703,
+    "elapsed_external_research_seconds": 495,
+    "budget_compliance": {
+      "call_limit": "within",
+      "external_research_deadline": "within",
+      "full_wall_time": "exceeded",
+      "reason": "Local handoff finalization continued after the 10-minute deadline; no new external source retrieval after 03:49:08 UTC."
+    }
+  },
+  "individual_reports": {
+    "intel-8c2f67a8a777f0df8440": "kvshare.md",
+    "intel-2a02efab2f63940b501b": "skillsbench.md",
+    "intel-15a0fb365c6c06275e28": "originblame.md"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": "native-proof-candidate-pool/1",
+  "count": 20,
+  "candidates": [
+    {
+      "url": "https://github.com/LMCache/LMCache",
+      "source": "github-inference",
+      "status": "background-read",
+      "reason": "已读取README；用于区分缓存管理与统一评测。"
+    },
+    {
+      "url": "https://github.com/NVIDIA/kvpress",
+      "source": "github-inference",
+      "status": "deferred",
+      "reason": "候选仓库；未读源码或结果，证据不足以成为结论。"
+    },
+    {
+      "url": "https://github.com/Zefan-Cai/R-KV",
+      "source": "github-inference",
+      "status": "deferred",
+      "reason": "候选仓库；未核验原文，优先级低于完整评测框架。"
+    },
+    {
+      "url": "https://github.com/ovg-project/kvcached",
+      "source": "github-inference",
+      "status": "deferred",
+      "reason": "候选缓存资源；未沿结果深入。"
+    },
+    {
+      "url": "https://github.com/llm-d/llm-d-kv-cache",
+      "source": "github-inference",
+      "status": "deferred",
+      "reason": "候选基础设施；本轮优先选择边界更清楚的统一评测。"
+    },
+    {
+      "url": "https://github.com/rohitg00/agentmemory",
+      "source": "github-agent-eval",
+      "status": "screened-out",
+      "reason": "搜索匹配，但只凭仓库名字不能确认基准能力。"
+    },
+    {
+      "url": "https://github.com/THUDM/AgentBench",
+      "source": "github-agent-eval",
+      "status": "background-read",
+      "reason": "已读原文；用于通用代理评测背景。"
+    },
+    {
+      "url": "https://github.com/benchflow-ai/skillsbench",
+      "source": "github-agent-eval",
+      "status": "selected",
+      "reason": "读到实际task/verifier，技能条件对比有直接应用价值。"
+    },
+    {
+      "url": "https://github.com/ethz-spylab/agentdojo",
+      "source": "github-agent-eval",
+      "status": "deferred",
+      "reason": "候选安全评测；预算内未读原文。"
+    },
+    {
+      "url": "https://github.com/SamuelSchmidgall/AgentClinic",
+      "source": "github-agent-eval",
+      "status": "deferred",
+      "reason": "领域评测候选；未核验临床工作流和数据。"
+    },
+    {
+      "url": "https://github.com/tzbkk/originblame",
+      "source": "web-directions",
+      "status": "selected",
+      "reason": "读到精确撤销接口、Rust实现与实验限制；旧资源明确标注。"
+    },
+    {
+      "url": "https://github.com/alizahidraja/isnad",
+      "source": "web-directions",
+      "status": "deferred",
+      "reason": "来源评分候选；搜索介绍不足证明评分可靠性。"
+    },
+    {
+      "url": "https://www.dataprovenance.org/",
+      "source": "web-directions",
+      "status": "failed-read",
+      "reason": "页面只返回JavaScript启用提示。"
+    },
+    {
+      "url": "https://github.com/xishi404/KVShare-Arena",
+      "source": "primary-related-links",
+      "status": "selected",
+      "reason": "论文关联到代码，评测成本口径和不可复现边界明确。"
+    },
+    {
+      "url": "https://github.com/taiga333/eval-kv-repurpose",
+      "source": "web-directions",
+      "status": "deferred",
+      "reason": "论文已读；未沿代码深入，收益限定于作者工作负载。"
+    },
+    {
+      "url": "https://opensource.microsoft.com/blog/2026/05/19/introducing-state-bench-a-benchmark-for-ai-agent-memory/",
+      "source": "web-directions",
+      "status": "deferred",
+      "reason": "官方介绍候选；本轮未读全文或代码。"
+    },
+    {
+      "url": "https://aclanthology.org/2026.acl-long.337/",
+      "source": "web-directions",
+      "status": "deferred",
+      "reason": "评测论文候选；未沿实现深入。"
+    },
+    {
+      "url": "https://github.com/vnageshwaran-de/Awesome-LLM-Agent-Evaluation",
+      "source": "web-directions",
+      "status": "entry-point",
+      "reason": "搜索可用入口；链接集合不是高价值发现本身。"
+    },
+    {
+      "url": "https://benchclaw.io/",
+      "source": "web-directions",
+      "status": "deferred",
+      "reason": "搜索介绍候选；原始harness/raw runs未核验。"
+    },
+    {
+      "url": "https://trace.datafdn.org/",
+      "source": "web-directions",
+      "status": "deferred",
+      "reason": "数据收据平台候选；实际数据和审核过程未核验。"
+    }
+  ],
+  "weak_initial_github_provenance_results": "5 original repository search results retained in github-data-provenance.json; excluded from plausible main pool after web alternatives"
+}
