@@ -1,0 +1,1953 @@
+{
+  "schema_version": "last30days-intelligence-public-example/1",
+  "provenance": "Recorded real authorized GitHub MCP observations, processed by CLI; not a simulation or a fresh direct-HTTP discovery run.",
+  "export_scope": "Public evidence excerpts; full private snapshots/database paths omitted.",
+  "report": {
+    "schema_version": "last30days-intelligence/1",
+    "id": "intel-c8f8b9392c4c73785e66",
+    "revision": "d1f3a819260f796cb594665d",
+    "canonical_url": "https://github.com/strands-labs/strands-decider",
+    "domain": "",
+    "title": "strands-labs/strands-decider",
+    "summary": "Strands Decider 提供选择与评分的决策模型及可靠性分数。最值得试的是把不确定决策交回人或较大模型，而不是把置信度直接当真实性。",
+    "generated_at": "2026-10-13T01:11:43.340341+00:00",
+    "source_trace": {
+      "earliest_verifiable": {
+        "url": "https://github.com/strands-labs/strands-decider",
+        "published_at": "2026-09-29T16:36:38Z",
+        "date_basis": "host-reported repository_created_at",
+        "scope": "retrieved_records_only",
+        "unrelated_references_excluded": true
+      },
+      "creator_direct": [
+        "https://github.com/strands-labs/strands-decider"
+      ],
+      "underlying_evidence": [
+        "https://github.com/strands-labs/strands-decider"
+      ],
+      "related_resources": [
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "resource_type": "documentation",
+          "status": "observed_relation_only; same_work_and_claim_support_unknown"
+        },
+        {
+          "url": "https://github.com/strands-agents/harness-sdk",
+          "resource_type": "repository",
+          "status": "observed_relation_only; same_work_and_claim_support_unknown"
+        }
+      ],
+      "underlying_evidence_status": "linked_original_material; support_for_experimental_claims_not_established",
+      "origin_status": "primary_resource_verified"
+    },
+    "evidence": [
+      {
+        "url": "https://github.com/strands-labs/strands-decider",
+        "quote": "<div align=\"center\">\n  <div>\n    <a href=\"https://strandsagents.com\">\n      <picture>\n        <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://strandsagents.com/latest/assets/wordmark-github-dark.svg\">\n        <img src=\"https://strandsagents.com/latest/assets/wordmark-github-light.svg\" alt=\"Strands\" width=\"320\">\n      </picture>\n    </a>\n  </div>\n\n  <h1>Strands Decider</h1>\n\n  <h2>A sm",
+        "locator": "text:chars:239-639",
+        "content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+        "verified_at": "2026-10-12T08:22:32+00:00",
+        "author": "strands-labs",
+        "published_at": "2026-09-29T16:36:38Z",
+        "version": null,
+        "resource_type": "repository",
+        "freshness_status": "host_observed_snapshot",
+        "content_origin": "extracted_or_adapter_assembled_snapshot",
+        "retrieval_records": [
+          {
+            "requested_url": "https://api.github.com/repos/strands-labs/strands-decider",
+            "response_url": "https://api.github.com/repos/strands-labs/strands-decider",
+            "status": null,
+            "content_type": "application/json",
+            "body_sha256": "f52fdb667efb373edadae58266af46b9448fb8607ee3ecc34c0e04f3fd299ea1",
+            "text_sha256": "f52fdb667efb373edadae58266af46b9448fb8607ee3ecc34c0e04f3fd299ea1",
+            "retrieved_at": "2026-10-12T08:22:32+00:00",
+            "tool": "github.fetch (authorized MCP)",
+            "retrieval_method": "host_tool_observation",
+            "body_encoding": "UTF-8 serialization of supplied host text; original HTTP bytes unknown"
+          },
+          {
+            "requested_url": "https://github.com/strands-labs/strands-decider/blob/main/README.md",
+            "response_url": "https://github.com/strands-labs/strands-decider/blob/main/README.md",
+            "status": null,
+            "content_type": "text/markdown",
+            "body_sha256": "e2e111027d941eb2132a938e57672c5357a88d96e108c7fa2b06ad7d08fa8895",
+            "text_sha256": "e2e111027d941eb2132a938e57672c5357a88d96e108c7fa2b06ad7d08fa8895",
+            "retrieved_at": "2026-10-12T08:22:32+00:00",
+            "tool": "github.fetch (authorized MCP)",
+            "retrieval_method": "host_tool_observation",
+            "body_encoding": "UTF-8 serialization of supplied host text; original HTTP bytes unknown"
+          }
+        ],
+        "status": "primary_document_retrieved",
+        "primary_basis": "host-reported original GitHub repository metadata indicates owner control and no fork/mirror; not CLI HTTP verification"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+        "quote": "# Results\n\nThe measurements of v1 (the released model), the Gemma 4 v1 models, v21, v19 and the versions\nbefore them: the seeds and release checks of v1, the Gemma 4 v1 models and v21, the AWS retrain, the summary by version,\ncalibration, and accuracy and latency on a Mac. [README.md](README.md) says how to run them, and\n[jevbench.md](jevbench.md) has the external benchmark. Paths are relative to",
+        "locator": "text:chars:0-399",
+        "content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+        "verified_at": "2026-10-12T08:22:32+00:00",
+        "author": null,
+        "published_at": null,
+        "version": null,
+        "resource_type": "documentation",
+        "freshness_status": "host_observed_snapshot",
+        "content_origin": "extracted_or_adapter_assembled_snapshot",
+        "retrieval_records": [
+          {
+            "requested_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+            "response_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+            "status": null,
+            "content_type": "text/markdown",
+            "body_sha256": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+            "text_sha256": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+            "retrieved_at": "2026-10-12T08:22:32+00:00",
+            "tool": "github.fetch (authorized MCP)",
+            "retrieval_method": "host_tool_observation",
+            "body_encoding": "UTF-8 serialization of supplied host text; original HTTP bytes unknown"
+          }
+        ],
+        "status": "document_retrieved",
+        "primary_basis": null
+      },
+      {
+        "url": "https://github.com/strands-agents/harness-sdk",
+        "quote": "Strands Agents\nA model-driven approach to building AI agents in just a few lines of code.\nDocumentation\n◆ Samples\n◆ MCP Server\n◆ Discord\nStrands Agents is an open-source SDK for building and running AI agents in Python and TypeScript. Choose Strands when you would otherwise write your own agent loop: it runs in your process with no hosted control plane, and it covers the jobs a hand-rolled loop gr",
+        "locator": "text:chars:0-400",
+        "content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+        "verified_at": "2026-10-13T01:04:47.508868+00:00",
+        "author": null,
+        "published_at": null,
+        "version": null,
+        "resource_type": "repository",
+        "freshness_status": "historical_not_revalidated",
+        "content_origin": "extracted_or_adapter_assembled_snapshot",
+        "retrieval_records": [
+          {
+            "body_sha256": "fe7d736b4b51de4e2264e54b529ae4acdb3809e0a8abdba502ecbfb4c68cd052",
+            "content_type": "text/html",
+            "etag": "W/\"ea9a6ea005e6694d891beaf3881e48fa\"",
+            "last_modified": null,
+            "requested_url": "https://github.com/strands-agents/sdk-python",
+            "response_url": "https://github.com/strands-agents/harness-sdk",
+            "retrieved_at": "2026-10-13T01:04:47.370038+00:00",
+            "status": 200
+          }
+        ],
+        "status": "document_retrieved",
+        "primary_basis": null
+      }
+    ],
+    "claims": [
+      {
+        "text": "Original observation has no claim text.",
+        "status": "unverified",
+        "evidence_urls": [],
+        "note": "A quoted author claim does not establish independent experimental verification."
+      },
+      {
+        "text": "Primary repository retrieved: strands-labs/strands-decider",
+        "status": "primary_document_confirmed",
+        "evidence_urls": [
+          "https://github.com/strands-labs/strands-decider"
+        ],
+        "note": "Confirms document availability and observed metadata only."
+      }
+    ],
+    "verification_status": "primary_material_retrieved; experiments_not_independently_verified",
+    "analysis": {
+      "status": "evidence_linked_agent_review",
+      "new": "关联评测记录说明版本调整了训练数据混合等设置，属于可追踪的具体版本变化；相对全部先前研究的创新程度仍未知。",
+      "why_it_matters": "作者声称在未见过的短分类任务上，置信度至少 0.9 的回答约有 95% 正确。若能在目标分布复现，可靠性分数可用于拒答或升级路由；目前只是作者评测。",
+      "application_potential": "可先调查 CPU 路径，用固定标签任务测试分类、工具路由与拒答。CPU 文档使它比仅限 MLX 的实现更值得在你的电脑上调查；Windows 兼容性尚未验证。",
+      "uncertainty": [
+        "No independent replication or experimental fact verification was performed.",
+        "Earliest public record is scoped to retrieved records; global priority is unknown.",
+        "Novelty, originality and practical value are heuristic proxies, not proved breakthroughs.",
+        "Some linked resources could not be retrieved; the evidence chain is partial.",
+        "Agent assessment is an evidence-linked interpretation, not independent fact or experiment verification.",
+        "评测文件说明训练数据构建代码尚未全部进入 main，现阶段无法从 main 重建该训练集。可靠性是否能迁移到你的领域、误差成本和硬件性能均未知。"
+      ],
+      "inferences": [],
+      "agent_insights": [],
+      "agent_assessment": {
+        "finding": {
+          "text": "Strands Decider 提供选择与评分的决策模型及可靠性分数。最值得试的是把不确定决策交回人或较大模型，而不是把置信度直接当真实性。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/strands-labs/strands-decider",
+              "quote": "a decision model picks between sets of options and\nrates things on a scale.",
+              "locator": "text:chars:1557-1632",
+              "content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "new": {
+          "text": "关联评测记录说明版本调整了训练数据混合等设置，属于可追踪的具体版本变化；相对全部先前研究的创新程度仍未知。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+              "quote": "**A balanced data mix** of 246,678 rows, about twice v21's:",
+              "locator": "text:chars:679-738",
+              "content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "why_it_matters": {
+          "text": "作者声称在未见过的短分类任务上，置信度至少 0.9 的回答约有 95% 正确。若能在目标分布复现，可靠性分数可用于拒答或升级路由；目前只是作者评测。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/strands-labs/strands-decider",
+              "quote": "answers at a confidence of 0.9 or more are right\n  about 95% of the time",
+              "locator": "text:chars:2451-2523",
+              "content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "application_potential": {
+          "text": "可先调查 CPU 路径，用固定标签任务测试分类、工具路由与拒答。CPU 文档使它比仅限 MLX 的实现更值得在你的电脑上调查；Windows 兼容性尚未验证。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/strands-labs/strands-decider",
+              "quote": "The `cuda`, `mps` and `cpu` extras name the other devices",
+              "locator": "text:chars:3041-3098",
+              "content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "limitations": {
+          "text": "评测文件说明训练数据构建代码尚未全部进入 main，现阶段无法从 main 重建该训练集。可靠性是否能迁移到你的领域、误差成本和硬件性能均未知。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+              "quote": "the training\ndata cannot be rebuilt from `main`.",
+              "locator": "text:chars:2078-2126",
+              "content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "next_steps": {
+          "text": "建立自己的保留测试集，记录各置信度区间的正确率、拒答率和延迟，再与生成式路由比较；先核对当前发布版本和训练数据可重建程度。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/strands-labs/strands-decider",
+              "quote": "answers at a confidence of 0.9 or more are right\n  about 95% of the time",
+              "locator": "text:chars:2451-2523",
+              "content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            },
+            {
+              "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+              "quote": "the training\ndata cannot be rebuilt from `main`.",
+              "locator": "text:chars:2078-2126",
+              "content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        }
+      },
+      "next_steps": "建立自己的保留测试集，记录各置信度区间的正确率、拒答率和延迟，再与生成式路由比较；先核对当前发布版本和训练数据可重建程度。"
+    },
+    "score": {
+      "total": 60.75,
+      "components": {
+        "application_potential": 60,
+        "confidence": 85.0,
+        "engagement": 0,
+        "evidence_quality": 75,
+        "novelty": 20,
+        "originality": 50,
+        "technical_value": 65
+      },
+      "weights": {
+        "novelty": 0.15,
+        "originality": 0.15,
+        "technical_value": 0.2,
+        "application_potential": 0.15,
+        "confidence": 0.2,
+        "evidence_quality": 0.15,
+        "engagement": 0
+      },
+      "model_version": "evidence-value/2",
+      "signals": {
+        "scope": "selected_same_work_artifacts_only",
+        "material_content_available": true,
+        "artifact_types": [
+          "repository"
+        ],
+        "technical_terms_observed": true,
+        "usable_interface_terms_observed": true,
+        "verified_recent_record": true,
+        "observed_version": false,
+        "material_change_from_local_history": false,
+        "discovery_role": "artifact_candidate",
+        "scientific_novelty": "unknown",
+        "novelty_scope": "dated/versioned artifact or observed local material change; not scientific innovation",
+        "originality_scope": "observed artifact control; no global-priority or independent-authorship proof",
+        "confidence_scope": "document provenance; not experimental correctness"
+      },
+      "method": "artifact_sufficiency_signals_and_local_history; scientific_novelty_unknown"
+    },
+    "tier": "B",
+    "graph": {
+      "nodes": [
+        {
+          "url": "https://github.com/strands-labs/strands-decider",
+          "kind": "repository",
+          "author": "strands-labs",
+          "primary_basis": "host-reported original GitHub repository metadata indicates owner control and no fork/mirror; not CLI HTTP verification",
+          "version": null
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "kind": "documentation",
+          "author": null,
+          "primary_basis": null,
+          "version": null
+        },
+        {
+          "url": "https://github.com/strands-agents/harness-sdk",
+          "kind": "repository",
+          "author": null,
+          "primary_basis": null,
+          "version": null
+        }
+      ],
+      "edges": [
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/README.md",
+          "relation": "readme",
+          "label": "Observed README",
+          "locator": "host:paired_snapshot_url",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://strandsagents.com/",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L3",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://strandsagents.com/latest/assets/wordmark-github-dark.svg",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L5",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://strandsagents.com/latest/assets/wordmark-github-light.svg",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L6",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/graphs/commit-activity",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L16",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://img.shields.io/github/commit-activity/m/strands-labs/strands-decider",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L16",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/issues",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L17",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://img.shields.io/github/issues/strands-labs/strands-decider",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L17",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/pulls",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L18",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://img.shields.io/github/issues-pr/strands-labs/strands-decider",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L18",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://discord.gg/Wa4CQrxsP",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L19",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white",
+          "relation": "references",
+          "label": "",
+          "locator": "host:text:L19",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-agents/sdk-python",
+          "relation": "code",
+          "label": "Strands Agents SDK",
+          "locator": "host:text:L32",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "relation": "documentation",
+          "label": "evaluation/results.md",
+          "locator": "host:text:L39",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": true
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/docs/inference.md",
+          "relation": "documentation",
+          "label": "docs/inference.md",
+          "locator": "host:text:L53",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/docs/vision.md",
+          "relation": "documentation",
+          "label": "docs/vision.md",
+          "locator": "host:text:L188",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/docs/naming.md",
+          "relation": "documentation",
+          "label": "docs/naming.md",
+          "locator": "host:text:L205",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://huggingface.co/StrandsAgents",
+          "relation": "references",
+          "label": "`StrandsAgents`",
+          "locator": "host:text:L207",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://huggingface.co/amazon",
+          "relation": "references",
+          "label": "`amazon`",
+          "locator": "host:text:L209",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://huggingface.co/StrandsAgents/strands-decider-E2B-gemma4-v1-2610",
+          "relation": "references",
+          "label": "`strands-decider-E2B-gemma4-v1-2610`",
+          "locator": "host:text:L219",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://huggingface.co/StrandsAgents/strands-decider-E4B-gemma4-v1-2610",
+          "relation": "references",
+          "label": "`strands-decider-E4B-gemma4-v1-2610`",
+          "locator": "host:text:L220",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://huggingface.co/StrandsAgents/strands-decider-12B-gemma4-v1-2610",
+          "relation": "references",
+          "label": "`strands-decider-12B-gemma4-v1-2610`",
+          "locator": "host:text:L221",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://huggingface.co/StrandsAgents/strands-decider-26B-A4B-gemma4-v1-2610",
+          "relation": "references",
+          "label": "`strands-decider-26B-A4B-gemma4-v1-2610`",
+          "locator": "host:text:L222",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider",
+          "relation": "code",
+          "label": "",
+          "locator": "host:text:L238",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": true
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/data/sources.md",
+          "relation": "documentation",
+          "label": "data/sources.md",
+          "locator": "host:text:L266",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/README.md",
+          "relation": "documentation",
+          "label": "Performance",
+          "locator": "host:text:L279",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://huggingface.co/Qwen",
+          "relation": "references",
+          "label": "Qwen3.5-2B-Base",
+          "locator": "host:text:L284",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/docs/architecture.md",
+          "relation": "documentation",
+          "label": "docs/architecture.md",
+          "locator": "host:text:L310",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/README.md",
+          "relation": "documentation",
+          "label": "evaluation/README.md",
+          "locator": "host:text:L320",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/jevbench.md",
+          "relation": "documentation",
+          "label": "evaluation/jevbench.md",
+          "locator": "host:text:L321",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/examples/strands/README.md",
+          "relation": "documentation",
+          "label": "`examples/strands/`",
+          "locator": "host:text:L369",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/training/README.md",
+          "relation": "documentation",
+          "label": "training/README.md",
+          "locator": "host:text:L376",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/training/aws/README.md",
+          "relation": "documentation",
+          "label": "training/aws/",
+          "locator": "host:text:L381",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/data/README.md",
+          "relation": "documentation",
+          "label": "data/README.md",
+          "locator": "host:text:L389",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/research/README.md",
+          "relation": "documentation",
+          "label": "research/README.md",
+          "locator": "host:text:L399",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/research/history.md",
+          "relation": "documentation",
+          "label": "research/history.md",
+          "locator": "host:text:L400",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/CONTRIBUTING.md",
+          "relation": "documentation",
+          "label": "CONTRIBUTING.md",
+          "locator": "host:text:L401",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/LICENSE",
+          "relation": "documentation",
+          "label": "LICENSE",
+          "locator": "host:text:L409",
+          "state": "observed_link",
+          "source_content_hash": "aeda3dc07320b1745d021d9153dded1f948097be7b7972afebaf0484f167c5f2",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/README.md",
+          "relation": "documentation",
+          "label": "README.md",
+          "locator": "host:text:L5",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/jevbench.md",
+          "relation": "documentation",
+          "label": "jevbench.md",
+          "locator": "host:text:L6",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/docs/naming.md",
+          "relation": "documentation",
+          "label": "docs/naming.md",
+          "locator": "host:text:L11",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/docs/vision.md",
+          "relation": "documentation",
+          "label": "docs/vision.md",
+          "locator": "host:text:L72",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/data/sources.md",
+          "relation": "documentation",
+          "label": "data/sources.md",
+          "locator": "host:text:L85",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/docs/inference.md",
+          "relation": "documentation",
+          "label": "docs/inference.md",
+          "locator": "host:text:L192",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/configs/experiments/v21b.yaml",
+          "relation": "documentation",
+          "label": "configs/experiments/v21b.yaml",
+          "locator": "host:text:L197",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/training/aws/README.md",
+          "relation": "documentation",
+          "label": "Measured stage timings",
+          "locator": "host:text:L253",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "relation": "documentation",
+          "label": "Serving on a Mac: accuracy and latency",
+          "locator": "host:text:L287",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": true
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/research/history.md",
+          "relation": "documentation",
+          "label": "v19: answer adequacy",
+          "locator": "host:text:L297",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/research/preregistrations/PREREGISTRATION-v20.md",
+          "relation": "documentation",
+          "label": "PREREGISTRATION-v20.md",
+          "locator": "host:text:L299",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://benchmarkheaven.com/jev-models",
+          "relation": "references",
+          "label": "JevBench",
+          "locator": "host:text:L319",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/docs/architecture.md",
+          "relation": "documentation",
+          "label": "routing convention",
+          "locator": "host:text:L406",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md",
+          "to_url": "https://github.com/strands-labs/strands-decider/blob/main/research/preregistrations/PREREGISTRATION-v19-calmix.md",
+          "relation": "documentation",
+          "label": "PREREGISTRATION-v19-calmix.md",
+          "locator": "host:text:L419",
+          "state": "observed_link",
+          "source_content_hash": "3c353cf34ea9d348f5ff950e6ed4698f84cf4b2fbed4b4f05e7def82c0f17fa9",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 3, a[1]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 12, a[2]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "code",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 21, a[4]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/graphs/commit-activity",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 22, a[5]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/issues",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 23, a[6]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/pulls",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 24, a[7]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/LICENSE.APACHE",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 25, a[8]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://pypi.org/project/strands-harness/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 26, a[9]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://www.npmjs.com/package/@strands-agents/harness",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 27, a[10]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://www.npmjs.com/package/@strands-agents/cli",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 28, a[11]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://pypi.org/project/strands-agents/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "",
+          "locator": "html:repository-readme/line 29, a[12]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://www.npmjs.com/package/@strands-agents/sdk",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "Samples",
+          "locator": "html:repository-readme/line 33, a[14]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "code",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/samples",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "MCP Server",
+          "locator": "html:repository-readme/line 34, a[15]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/tree/main/strands-mcp",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "Discord",
+          "locator": "html:repository-readme/line 35, a[16]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://discord.gg/strands",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "lifecycle controls",
+          "locator": "html:repository-readme/line 38, a[17]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/concepts/agents/agent-loop/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "tools",
+          "locator": "html:repository-readme/line 38, a[18]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/concepts/tools/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "structured output",
+          "locator": "html:repository-readme/line 38, a[19]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/concepts/agents/structured-output/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "MCP",
+          "locator": "html:repository-readme/line 38, a[20]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/concepts/tools/mcp-tools/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "multi-agent patterns",
+          "locator": "html:repository-readme/line 38, a[21]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/concepts/multi-agent/multi-agent-patterns/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "memory",
+          "locator": "html:repository-readme/line 38, a[22]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/concepts/memory/overview/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "sessions",
+          "locator": "html:repository-readme/line 38, a[23]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/concepts/agents/session-management/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "model portability",
+          "locator": "html:repository-readme/line 38, a[24]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/concepts/model-providers/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "streaming",
+          "locator": "html:repository-readme/line 38, a[25]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/concepts/streaming/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "guardrails",
+          "locator": "html:repository-readme/line 38, a[26]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/safety-security/guardrails/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "tracing",
+          "locator": "html:repository-readme/line 38, a[27]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/observability-evaluation/observability/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "evals",
+          "locator": "html:repository-readme/line 38, a[28]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/evals-sdk/quickstart/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "Strands skill",
+          "locator": "html:repository-readme/line 39, a[29]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/.agents/skills/strands",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "harness-py/",
+          "locator": "html:repository-readme/line 50, a[30]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/harness-py",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "docs",
+          "locator": "html:repository-readme/line 51, a[32]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/harness/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "harness-ts/",
+          "locator": "html:repository-readme/line 54, a[33]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/harness-ts",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "strands-cli/",
+          "locator": "html:repository-readme/line 58, a[36]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/strands-cli",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "strands-py/",
+          "locator": "html:repository-readme/line 62, a[38]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/strands-py",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "releases",
+          "locator": "html:repository-readme/line 63, a[40]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "release",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/releases?q=python%2F&expanded=false",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "strands-ts/",
+          "locator": "html:repository-readme/line 66, a[41]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/strands-ts",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "releases",
+          "locator": "html:repository-readme/line 67, a[43]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "release",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/releases?q=typescript%2F&expanded=false",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "strands-mcp/",
+          "locator": "html:repository-readme/line 70, a[44]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/strands-mcp",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "PyPI",
+          "locator": "html:repository-readme/line 71, a[45]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://pypi.org/project/strands-agents-mcp-server/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "site/",
+          "locator": "html:repository-readme/line 74, a[46]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/site",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "team/",
+          "locator": "html:repository-readme/line 78, a[48]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/team",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "test-infra/",
+          "locator": "html:repository-readme/line 82, a[49]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/test-infra",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "harness quickstart",
+          "locator": "html:repository-readme/line 97, a[54]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/harness/quickstart/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "harness configuration reference",
+          "locator": "html:repository-readme/line 116, a[59]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/harness/reference/configuration/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "Quickstart Guide",
+          "locator": "html:repository-readme/line 117, a[60]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/quickstart/overview/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "Bidirectional Streaming",
+          "locator": "html:repository-readme/line 153, a[73]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/sdk/bidi/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "Examples",
+          "locator": "html:repository-readme/line 154, a[74]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/examples/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "Python",
+          "locator": "html:repository-readme/line 155, a[75]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/api/python/strands.agent.agent/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "TypeScript",
+          "locator": "html:repository-readme/line 155, a[76]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/api/typescript/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "Production & Deployment Guide",
+          "locator": "html:repository-readme/line 156, a[77]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://strandsagents.com/docs/user-guide/deploy/operating-agents-in-production/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "Contributing Guide",
+          "locator": "html:repository-readme/line 182, a[81]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "documentation",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/strands-agents/harness-sdk/blob/main/CONTRIBUTING.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/strands-agents/harness-sdk",
+          "label": "Discord",
+          "locator": "html:repository-readme/line 191, a[83]/@href",
+          "observed_at": "2026-10-13T01:04:47.508868+00:00",
+          "relation": "references",
+          "source_content_hash": "f15717bcaf1a02195fec34812271f298355dea11799228e2e071321056629c31",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://discord.com/invite/strands",
+          "freshness_status": "historical_not_revalidated"
+        }
+      ]
+    },
+    "failures": [
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/README.md",
+        "status": "budget_exhausted",
+        "reason": "call budget exhausted"
+      }
+    ],
+    "exploration": {
+      "truncated": true,
+      "visited_nodes": 3,
+      "cache_hits": 0,
+      "budget": {
+        "operations": 3,
+        "resource_nodes": 4,
+        "cost_usd": 0.0,
+        "elapsed_seconds": 0.345,
+        "limits": {
+          "max_depth": 1,
+          "max_calls": 3,
+          "max_nodes": 4,
+          "max_seconds": 10,
+          "max_cost_usd": 0,
+          "request_timeout": 12,
+          "max_bytes": 1048576
+        }
+      },
+      "pending": [
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/README.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/jevbench.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/naming.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/vision.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/data/sources.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/inference.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/configs/experiments/v21b.yaml",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/training/aws/README.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/research/history.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/research/preregistrations/PREREGISTRATION-v20.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://benchmarkheaven.com/jev-models",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/architecture.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/research/preregistrations/PREREGISTRATION-v19-calmix.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/README.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/README.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/vision.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-agents/sdk-python",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/naming.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/graphs/commit-activity",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/data/sources.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/inference.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/training/aws/README.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/CONTRIBUTING.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://img.shields.io/github/issues-pr/strands-labs/strands-decider",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://discord.gg/Wa4CQrxsP",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://strandsagents.com/latest/assets/wordmark-github-dark.svg",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/architecture.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/README.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/examples/strands/README.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/data/README.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/research/README.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/LICENSE",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://huggingface.co/amazon",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://huggingface.co/StrandsAgents/strands-decider-E2B-gemma4-v1-2610",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://huggingface.co/StrandsAgents/strands-decider-E4B-gemma4-v1-2610",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://huggingface.co/StrandsAgents/strands-decider-12B-gemma4-v1-2610",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://huggingface.co/StrandsAgents/strands-decider-26B-A4B-gemma4-v1-2610",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/pulls",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://huggingface.co/Qwen",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://img.shields.io/github/commit-activity/m/strands-labs/strands-decider",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/issues",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/jevbench.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://huggingface.co/StrandsAgents",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/training/README.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://img.shields.io/github/issues/strands-labs/strands-decider",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://strandsagents.com/",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://strandsagents.com/latest/assets/wordmark-github-light.svg",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/strands-labs/strands-decider/blob/main/research/history.md",
+          "reason": "budget_limit"
+        }
+      ]
+    },
+    "next_directions": [
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/README.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/jevbench.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/naming.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/vision.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/data/sources.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/inference.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/configs/experiments/v21b.yaml",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/training/aws/README.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/research/history.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/research/preregistrations/PREREGISTRATION-v20.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://benchmarkheaven.com/jev-models",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/architecture.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/research/preregistrations/PREREGISTRATION-v19-calmix.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/README.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/README.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/vision.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-agents/sdk-python",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/naming.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/graphs/commit-activity",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/data/sources.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/inference.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/training/aws/README.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/CONTRIBUTING.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://img.shields.io/github/issues-pr/strands-labs/strands-decider",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://discord.gg/Wa4CQrxsP",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://strandsagents.com/latest/assets/wordmark-github-dark.svg",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/docs/architecture.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/README.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/examples/strands/README.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/data/README.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/research/README.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/LICENSE",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://huggingface.co/amazon",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://huggingface.co/StrandsAgents/strands-decider-E2B-gemma4-v1-2610",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://huggingface.co/StrandsAgents/strands-decider-E4B-gemma4-v1-2610",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://huggingface.co/StrandsAgents/strands-decider-12B-gemma4-v1-2610",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://huggingface.co/StrandsAgents/strands-decider-26B-A4B-gemma4-v1-2610",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/pulls",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://huggingface.co/Qwen",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://img.shields.io/github/commit-activity/m/strands-labs/strands-decider",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/issues",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/evaluation/jevbench.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://huggingface.co/StrandsAgents",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/training/README.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://img.shields.io/github/issues/strands-labs/strands-decider",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://strandsagents.com/",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://strandsagents.com/latest/assets/wordmark-github-light.svg",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/strands-labs/strands-decider/blob/main/research/history.md",
+        "reason": "budget_limit"
+      }
+    ]
+  }
+}

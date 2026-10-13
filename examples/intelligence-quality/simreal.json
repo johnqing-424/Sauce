@@ -1,0 +1,1914 @@
+{
+  "schema_version": "last30days-intelligence-public-example/1",
+  "provenance": "Recorded real authorized GitHub MCP observations, processed by CLI; not a simulation or a fresh direct-HTTP discovery run.",
+  "export_scope": "Public evidence excerpts; full private snapshots/database paths omitted.",
+  "report": {
+    "schema_version": "last30days-intelligence/1",
+    "id": "intel-053883dd3298b43896b6",
+    "revision": "c958f8d0619ea5a8a5932666",
+    "canonical_url": "https://github.com/simreal-ai/simreal-mlbench",
+    "domain": "",
+    "title": "Simreal-AI/Simreal-MLBench",
+    "summary": "Simreal-MLBench 公开了机器学习研究 Agent 的任务目录、评测协议、评分代码和客户端，但完整评测运行平台并未开源。",
+    "generated_at": "2026-10-13T01:11:45.001727+00:00",
+    "source_trace": {
+      "earliest_verifiable": {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench",
+        "published_at": "2026-09-21T11:29:47Z",
+        "date_basis": "host-reported repository_created_at",
+        "scope": "retrieved_records_only",
+        "unrelated_references_excluded": true
+      },
+      "creator_direct": [
+        "https://github.com/Simreal-AI/Simreal-MLBench"
+      ],
+      "underlying_evidence": [
+        "https://github.com/Simreal-AI/Simreal-MLBench"
+      ],
+      "related_resources": [
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "resource_type": "documentation",
+          "status": "observed_relation_only; same_work_and_claim_support_unknown"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench",
+          "resource_type": "repository",
+          "status": "observed_relation_only; same_work_and_claim_support_unknown"
+        }
+      ],
+      "underlying_evidence_status": "linked_original_material; support_for_experimental_claims_not_established",
+      "origin_status": "primary_resource_verified"
+    },
+    "evidence": [
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench",
+        "quote": "# ML Benchmark by Simreal (Simreal.co)\n\n[![Status: public preview](https://img.shields.io/badge/status-public%20preview-34d399)](https://github.com/Simreal-AI)\n\n**An externally scored, verifiable evaluation environment for machine learning research agents.**\n**Open protocol. Operated evaluation.**\n\n> **Public preview.** This repository is the open, minimal slice of ML Benchmark: the 60-task catalo",
+        "locator": "text:chars:196-596",
+        "content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+        "verified_at": "2026-10-12T08:22:32+00:00",
+        "author": "Simreal-AI",
+        "published_at": "2026-09-21T11:29:47Z",
+        "version": null,
+        "resource_type": "repository",
+        "freshness_status": "host_observed_snapshot",
+        "content_origin": "extracted_or_adapter_assembled_snapshot",
+        "retrieval_records": [
+          {
+            "requested_url": "https://api.github.com/repos/Simreal-AI/Simreal-MLBench",
+            "response_url": "https://api.github.com/repos/Simreal-AI/Simreal-MLBench",
+            "status": null,
+            "content_type": "application/json",
+            "body_sha256": "796ab82c5d7df76c71a5ce05dcd63b73334e6356f6c604ca3ac81985f38e3a6b",
+            "text_sha256": "796ab82c5d7df76c71a5ce05dcd63b73334e6356f6c604ca3ac81985f38e3a6b",
+            "retrieved_at": "2026-10-12T08:22:32+00:00",
+            "tool": "github.fetch (authorized MCP)",
+            "retrieval_method": "host_tool_observation",
+            "body_encoding": "UTF-8 serialization of supplied host text; original HTTP bytes unknown"
+          },
+          {
+            "requested_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+            "response_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+            "status": null,
+            "content_type": "text/markdown",
+            "body_sha256": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+            "text_sha256": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+            "retrieved_at": "2026-10-12T08:22:32+00:00",
+            "tool": "github.fetch (authorized MCP)",
+            "retrieval_method": "host_tool_observation",
+            "body_encoding": "UTF-8 serialization of supplied host text; original HTTP bytes unknown"
+          }
+        ],
+        "status": "primary_document_retrieved",
+        "primary_basis": "host-reported original GitHub repository metadata indicates owner control and no fork/mirror; not CLI HTTP verification"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+        "quote": "# ML Benchmark by Simreal (Simreal.co)\n\n[![Status: public preview](https://img.shields.io/badge/status-public%20preview-34d399)](https://github.com/Simreal-AI)\n\n**An externally scored, verifiable evaluation environment for machine learning research agents.**\n**Open protocol. Operated evaluation.**\n\n> **Public preview.** This repository is the open, minimal slice of ML Benchmark: the 60-task catalo",
+        "locator": "text:chars:0-400",
+        "content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+        "verified_at": "2026-10-12T08:22:32+00:00",
+        "author": null,
+        "published_at": null,
+        "version": null,
+        "resource_type": "documentation",
+        "freshness_status": "host_observed_snapshot",
+        "content_origin": "extracted_or_adapter_assembled_snapshot",
+        "retrieval_records": [
+          {
+            "requested_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+            "response_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+            "status": null,
+            "content_type": "text/markdown",
+            "body_sha256": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+            "text_sha256": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+            "retrieved_at": "2026-10-12T08:22:32+00:00",
+            "tool": "github.fetch (authorized MCP)",
+            "retrieval_method": "host_tool_observation",
+            "body_encoding": "UTF-8 serialization of supplied host text; original HTTP bytes unknown"
+          }
+        ],
+        "status": "document_retrieved",
+        "primary_basis": null
+      },
+      {
+        "url": "https://github.com/openai/mle-bench",
+        "quote": "MLE-bench\nCode for the paper \"MLE-Bench: Evaluating Machine Learning Agents on Machine Learning Engineering\". We have released the code used to construct the dataset, the evaluation logic, as well as the agents we evaluated for this benchmark.\nLeaderboard\nUpdate (04-24-2026): We are currently not taking any new submissions to the leaderboard while we develop an improved process for ensuring submis",
+        "locator": "text:chars:0-400",
+        "content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+        "verified_at": "2026-10-13T01:04:34.261193+00:00",
+        "author": "openai",
+        "published_at": null,
+        "version": null,
+        "resource_type": "repository",
+        "freshness_status": "retrieved_or_cached",
+        "content_origin": "extracted_or_adapter_assembled_snapshot",
+        "retrieval_records": [
+          {
+            "body_sha256": "71905da2dc2457414e8fd4dec3906e1cfeed861379df98d7047563e0a2179e03",
+            "content_type": "text/html",
+            "etag": "W/\"92fbe4e540d1c124535bb8c2fc38debc\"",
+            "last_modified": null,
+            "requested_url": "https://github.com/openai/mle-bench",
+            "response_url": "https://github.com/openai/mle-bench",
+            "retrieved_at": "2026-10-13T01:04:34.147672+00:00",
+            "status": 200
+          }
+        ],
+        "status": "document_retrieved",
+        "primary_basis": null
+      }
+    ],
+    "claims": [
+      {
+        "text": "Original observation has no claim text.",
+        "status": "unverified",
+        "evidence_urls": [],
+        "note": "A quoted author claim does not establish independent experimental verification."
+      },
+      {
+        "text": "Primary repository retrieved: Simreal-AI/Simreal-MLBench",
+        "status": "primary_document_confirmed",
+        "evidence_urls": [
+          "https://github.com/Simreal-AI/Simreal-MLBench"
+        ],
+        "note": "Confirms document availability and observed metadata only."
+      }
+    ],
+    "verification_status": "primary_material_retrieved; experiments_not_independently_verified",
+    "analysis": {
+      "status": "evidence_linked_agent_review",
+      "new": "值得关注的是两次提交之间提供真实评分反馈的评测设计，便于观察 Agent 是否能据反馈改进；这不是新模型性能突破，也未完成与其他评测的全面比较。",
+      "why_it_matters": "这类协议可以把一次性答题与基于反馈迭代的能力分开测量。官方评分和数据隔离的实际执行仍需要运行平台访问和审计，不能只凭 README 确认。",
+      "application_potential": "可以先阅读和借鉴公开协议、任务目录与客户端设计，或评估服务是否适合研究团队；不能默认下载仓库就能免费运行完整基准。",
+      "uncertainty": [
+        "No independent replication or experimental fact verification was performed.",
+        "Earliest public record is scoped to retrieved records; global priority is unknown.",
+        "Novelty, originality and practical value are heuristic proxies, not proved breakthroughs.",
+        "Some linked resources could not be retrieved; the evidence chain is partial.",
+        "Agent assessment is an evidence-linked interpretation, not independent fact or experiment verification.",
+        "当前为公开预览，完整运行和正式评分依赖商业服务；未运行任何任务，也未验证平台隔离或作者的可信评测主张。"
+      ],
+      "inferences": [],
+      "agent_insights": [],
+      "agent_assessment": {
+        "finding": {
+          "text": "Simreal-MLBench 公开了机器学习研究 Agent 的任务目录、评测协议、评分代码和客户端，但完整评测运行平台并未开源。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/Simreal-AI/Simreal-MLBench",
+              "quote": "The evaluation runtime, the official-scoring route and full-suite admission run on the SimReal engine and are not in this repository.",
+              "locator": "text:chars:661-794",
+              "content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "new": {
+          "text": "值得关注的是两次提交之间提供真实评分反馈的评测设计，便于观察 Agent 是否能据反馈改进；这不是新模型性能突破，也未完成与其他评测的全面比较。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/Simreal-AI/Simreal-MLBench",
+              "quote": "**Agents get a second submission, with a real score in between.**",
+              "locator": "text:chars:2867-2932",
+              "content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "why_it_matters": {
+          "text": "这类协议可以把一次性答题与基于反馈迭代的能力分开测量。官方评分和数据隔离的实际执行仍需要运行平台访问和审计，不能只凭 README 确认。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/Simreal-AI/Simreal-MLBench",
+              "quote": "Two submissions with honest feedback between them make a different question measurable: not only how well an agent performs, but whether it can act on the truth once it has it.",
+              "locator": "text:chars:2964-3140",
+              "content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "application_potential": {
+          "text": "可以先阅读和借鉴公开协议、任务目录与客户端设计，或评估服务是否适合研究团队；不能默认下载仓库就能免费运行完整基准。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/Simreal-AI/Simreal-MLBench",
+              "quote": "The evaluation runtime is a commercial product operated by Simreal.",
+              "locator": "text:chars:2110-2177",
+              "content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "limitations": {
+          "text": "当前为公开预览，完整运行和正式评分依赖商业服务；未运行任何任务，也未验证平台隔离或作者的可信评测主张。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/Simreal-AI/Simreal-MLBench",
+              "quote": "The evaluation runtime, the official-scoring route and full-suite admission run on the SimReal engine and are not in this repository.",
+              "locator": "text:chars:661-794",
+              "content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "next_steps": {
+          "text": "先检查公开任务与评分约束，比较同一 Agent 在一轮和两轮反馈下的表现；若要完整实测，先确认服务授权、费用和可访问的数据，不执行仓库中的安装指令。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/Simreal-AI/Simreal-MLBench",
+              "quote": "**Agents get a second submission, with a real score in between.**",
+              "locator": "text:chars:2867-2932",
+              "content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            },
+            {
+              "url": "https://github.com/Simreal-AI/Simreal-MLBench",
+              "quote": "The evaluation runtime is a commercial product operated by Simreal.",
+              "locator": "text:chars:2110-2177",
+              "content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        }
+      },
+      "next_steps": "先检查公开任务与评分约束，比较同一 Agent 在一轮和两轮反馈下的表现；若要完整实测，先确认服务授权、费用和可访问的数据，不执行仓库中的安装指令。"
+    },
+    "score": {
+      "total": 60.75,
+      "components": {
+        "application_potential": 60,
+        "confidence": 85.0,
+        "engagement": 0,
+        "evidence_quality": 75,
+        "novelty": 20,
+        "originality": 50,
+        "technical_value": 65
+      },
+      "weights": {
+        "novelty": 0.15,
+        "originality": 0.15,
+        "technical_value": 0.2,
+        "application_potential": 0.15,
+        "confidence": 0.2,
+        "evidence_quality": 0.15,
+        "engagement": 0
+      },
+      "model_version": "evidence-value/2",
+      "signals": {
+        "scope": "selected_same_work_artifacts_only",
+        "material_content_available": true,
+        "artifact_types": [
+          "repository"
+        ],
+        "technical_terms_observed": true,
+        "usable_interface_terms_observed": true,
+        "verified_recent_record": true,
+        "observed_version": false,
+        "material_change_from_local_history": false,
+        "discovery_role": "artifact_candidate",
+        "scientific_novelty": "unknown",
+        "novelty_scope": "dated/versioned artifact or observed local material change; not scientific innovation",
+        "originality_scope": "observed artifact control; no global-priority or independent-authorship proof",
+        "confidence_scope": "document provenance; not experimental correctness"
+      },
+      "method": "artifact_sufficiency_signals_and_local_history; scientific_novelty_unknown"
+    },
+    "tier": "B",
+    "graph": {
+      "nodes": [
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "kind": "repository",
+          "author": "Simreal-AI",
+          "primary_basis": "host-reported original GitHub repository metadata indicates owner control and no fork/mirror; not CLI HTTP verification",
+          "version": null
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "kind": "documentation",
+          "author": null,
+          "primary_basis": null,
+          "version": null
+        },
+        {
+          "url": "https://github.com/openai/mle-bench",
+          "kind": "repository",
+          "author": "openai",
+          "primary_basis": null,
+          "version": null
+        }
+      ],
+      "edges": [
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "relation": "readme",
+          "label": "Observed README",
+          "locator": "host:paired_snapshot_url",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": true
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://img.shields.io/badge/status-public%20preview-34d399",
+          "relation": "references",
+          "label": "![Status: public preview",
+          "locator": "host:text:L3",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI",
+          "relation": "author",
+          "label": "",
+          "locator": "host:text:L3",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/reports/REPORT.md",
+          "relation": "documentation",
+          "label": "report",
+          "locator": "host:text:L38",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/GATEWAY.md",
+          "relation": "documentation",
+          "label": "Gateway guide",
+          "locator": "host:text:L95",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/CATALOG.md",
+          "relation": "documentation",
+          "label": "task catalog",
+          "locator": "host:text:L111",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/data-access/README.md",
+          "relation": "documentation",
+          "label": "data access guide",
+          "locator": "host:text:L111",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/SCORING.md",
+          "relation": "documentation",
+          "label": "SCORING.md",
+          "locator": "host:text:L117",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RL_RLVR_RSI.md",
+          "relation": "documentation",
+          "label": "RL, RLVR and RSI",
+          "locator": "host:text:L134",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/AGENT_GUIDE.md",
+          "relation": "documentation",
+          "label": "Agent guide",
+          "locator": "host:text:L138",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/SETUP.md",
+          "relation": "documentation",
+          "label": "Environment setup",
+          "locator": "host:text:L138",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RELEASING.md",
+          "relation": "documentation",
+          "label": "Release structure",
+          "locator": "host:text:L138",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/THIRD_PARTY_NOTICES.md",
+          "relation": "documentation",
+          "label": "Third-party notices",
+          "locator": "host:text:L138",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://github.com/openai/mle-bench",
+          "relation": "code",
+          "label": "MLE-bench",
+          "locator": "host:text:L140",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": true
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench",
+          "to_url": "https://simreal.co/",
+          "relation": "references",
+          "label": "SimReal",
+          "locator": "host:text:L144",
+          "state": "observed_link",
+          "source_content_hash": "07f2a0924bd5c5ff714893ca709b33263e7b54551eb07102f6c882337e05e886",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://img.shields.io/badge/status-public%20preview-34d399",
+          "relation": "references",
+          "label": "![Status: public preview",
+          "locator": "host:text:L3",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI",
+          "relation": "author",
+          "label": "",
+          "locator": "host:text:L3",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/reports/REPORT.md",
+          "relation": "documentation",
+          "label": "report",
+          "locator": "host:text:L38",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/GATEWAY.md",
+          "relation": "documentation",
+          "label": "Gateway guide",
+          "locator": "host:text:L95",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/CATALOG.md",
+          "relation": "documentation",
+          "label": "task catalog",
+          "locator": "host:text:L111",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/data-access/README.md",
+          "relation": "documentation",
+          "label": "data access guide",
+          "locator": "host:text:L111",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/SCORING.md",
+          "relation": "documentation",
+          "label": "SCORING.md",
+          "locator": "host:text:L117",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RL_RLVR_RSI.md",
+          "relation": "documentation",
+          "label": "RL, RLVR and RSI",
+          "locator": "host:text:L134",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/AGENT_GUIDE.md",
+          "relation": "documentation",
+          "label": "Agent guide",
+          "locator": "host:text:L138",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/SETUP.md",
+          "relation": "documentation",
+          "label": "Environment setup",
+          "locator": "host:text:L138",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RELEASING.md",
+          "relation": "documentation",
+          "label": "Release structure",
+          "locator": "host:text:L138",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/THIRD_PARTY_NOTICES.md",
+          "relation": "documentation",
+          "label": "Third-party notices",
+          "locator": "host:text:L138",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://github.com/openai/mle-bench",
+          "relation": "code",
+          "label": "MLE-bench",
+          "locator": "host:text:L140",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": true
+        },
+        {
+          "from_url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/README.md",
+          "to_url": "https://simreal.co/",
+          "relation": "references",
+          "label": "SimReal",
+          "locator": "host:text:L144",
+          "state": "observed_link",
+          "source_content_hash": "9f0de34038748496b4a208cb7bf56224ca3463a78c71699c54d585f6493c3f43",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench",
+          "relation": "code",
+          "label": "",
+          "locator": "html:repository-readme/line 1, a[1]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": true
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://arxiv.org/abs/2410.07095",
+          "relation": "paper",
+          "label": "\"MLE-Bench: Evaluating Machine Learning Agents on Machine Learning Engineering\"",
+          "locator": "html:repository-readme/line 2, a[2]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/baidubce/FM-Agent",
+          "relation": "code",
+          "label": "Famou-Agent 2.0",
+          "locator": "html:repository-readme/line 22, a[4]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/aibuildai/AI-Build-AI",
+          "relation": "code",
+          "label": "AIBuildAI",
+          "locator": "html:repository-readme/line 34, a[5]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://research.google/teams/cloud-ai-research/",
+          "relation": "references",
+          "label": "CAIR",
+          "locator": "html:repository-readme/line 46, a[6]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://arxiv.org/pdf/2602.02660",
+          "relation": "pdf",
+          "label": "MARS+",
+          "locator": "html:repository-readme/line 46, a[7]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/InternScience/MLEvolve",
+          "relation": "code",
+          "label": "MLEvolve",
+          "locator": "html:repository-readme/line 58, a[8]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/FractalAIResearchLabs/PiEvolve",
+          "relation": "code",
+          "label": "PiEvolve",
+          "locator": "html:repository-readme/line 70, a[9]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/sjtu-sai-agents/ML-Master",
+          "relation": "code",
+          "label": "ML-Master 2.0",
+          "locator": "html:repository-readme/line 94, a[16]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/Leeroo-AI/kapso",
+          "relation": "code",
+          "label": "Leeroo",
+          "locator": "html:repository-readme/line 130, a[25]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://thesislabs.ai/",
+          "relation": "references",
+          "label": "Thesis",
+          "locator": "html:repository-readme/line 142, a[31]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://operand.com/",
+          "relation": "references",
+          "label": "Operand",
+          "locator": "html:repository-readme/line 178, a[34]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/Alpha-Innovator/InternAgent/",
+          "relation": "code",
+          "label": "InternAgent",
+          "locator": "html:repository-readme/line 202, a[40]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/microsoft/RD-Agent",
+          "relation": "code",
+          "label": "R&D-Agent",
+          "locator": "html:repository-readme/line 214, a[41]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://heyneo.so/",
+          "relation": "references",
+          "label": "Neo",
+          "locator": "html:repository-readme/line 226, a[42]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/facebookresearch/aira-dojo/",
+          "relation": "code",
+          "label": "AIRA-dojo",
+          "locator": "html:repository-readme/line 238, a[43]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/zeroxleo/ML-Master",
+          "relation": "code",
+          "label": "ML-Master",
+          "locator": "html:repository-readme/line 262, a[45]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/wecoai/aideml",
+          "relation": "code",
+          "label": "AIDE",
+          "locator": "html:repository-readme/line 286, a[47]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://disarray.ai/",
+          "relation": "references",
+          "label": "Disarray",
+          "locator": "html:repository-readme/line 379, a[52]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/pull/118",
+          "relation": "references",
+          "label": "Test-set feedback",
+          "locator": "html:repository-readme/line 387, a[53]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/baidu-baige/LoongFlow",
+          "relation": "code",
+          "label": "LoongFlow",
+          "locator": "html:repository-readme/line 392, a[54]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/pull/119",
+          "relation": "references",
+          "label": "Test-set feedback",
+          "locator": "html:repository-readme/line 400, a[59]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/blob/main/experiments/splits",
+          "relation": "documentation",
+          "label": "splits",
+          "locator": "html:repository-readme/line 431, a[62]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/blob/main/experiments/splits/low.txt",
+          "relation": "documentation",
+          "label": "Low complexity split",
+          "locator": "html:repository-readme/line 434, a[64]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://git-lfs.com/",
+          "relation": "references",
+          "label": "Git-LFS",
+          "locator": "html:repository-readme/line 559, a[67]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/Kaggle/kaggle-api",
+          "relation": "code",
+          "label": "Kaggle API",
+          "locator": "html:repository-readme/line 576, a[70]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/blob/main/agents/README.md",
+          "relation": "documentation",
+          "label": "agents/README.md",
+          "locator": "html:repository-readme/line 608, a[74]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/blob/main/extras/README.md",
+          "relation": "documentation",
+          "label": "extras/README.md",
+          "locator": "html:repository-readme/line 613, a[76]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/blob/main/examples/README.md",
+          "relation": "documentation",
+          "label": "examples/README.md",
+          "locator": "html:repository-readme/line 615, a[78]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/blob/main/experiments/familiarity/README.md",
+          "relation": "documentation",
+          "label": "experiments/familiarity/README.md",
+          "locator": "html:repository-readme/line 623, a[80]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/frontier-evals",
+          "relation": "code",
+          "label": "openai/frontier-evals",
+          "locator": "html:repository-readme/line 632, a[83]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/issues/134",
+          "relation": "references",
+          "label": "#134",
+          "locator": "html:repository-readme/line 642, a[84]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/issues/63",
+          "relation": "references",
+          "label": "#63",
+          "locator": "html:repository-readme/line 649, a[85]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/issues/58",
+          "relation": "references",
+          "label": "#58",
+          "locator": "html:repository-readme/line 655, a[86]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/issues/30",
+          "relation": "references",
+          "label": "#30",
+          "locator": "html:repository-readme/line 658, a[87]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/issues/128",
+          "relation": "references",
+          "label": "#128",
+          "locator": "html:repository-readme/line 662, a[88]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/issues/122",
+          "relation": "references",
+          "label": "#122",
+          "locator": "html:repository-readme/line 666, a[89]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/pull/70",
+          "relation": "references",
+          "label": "#70",
+          "locator": "html:repository-readme/line 674, a[90]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/issues/77",
+          "relation": "references",
+          "label": "#77",
+          "locator": "html:repository-readme/line 676, a[91]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/issues/93",
+          "relation": "references",
+          "label": "#93",
+          "locator": "html:repository-readme/line 679, a[92]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/openai/mle-bench",
+          "to_url": "https://github.com/openai/mle-bench/issues/108",
+          "relation": "references",
+          "label": "#108",
+          "locator": "html:repository-readme/line 685, a[93]/@href",
+          "state": "observed_link",
+          "source_content_hash": "bc2929e8a2b633c92a5efb4724ae1b26051075d6111024c98294c37d567456fe",
+          "observed_at": "2026-10-13T01:04:34.261193+00:00",
+          "target_verified": false
+        }
+      ]
+    },
+    "failures": [
+      {
+        "kind": "network_policy",
+        "message": "destination is absent from the managed HTTP allowlist",
+        "source": "github_api",
+        "status": 403,
+        "url": "https://github.com/openai/mle-bench"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/reports/REPORT.md",
+        "status": "budget_exhausted",
+        "reason": "resource node budget exhausted"
+      }
+    ],
+    "exploration": {
+      "truncated": true,
+      "visited_nodes": 3,
+      "cache_hits": 1,
+      "budget": {
+        "operations": 3,
+        "resource_nodes": 4,
+        "cost_usd": 0.0,
+        "elapsed_seconds": 0.777,
+        "limits": {
+          "max_depth": 1,
+          "max_calls": 3,
+          "max_nodes": 4,
+          "max_seconds": 10,
+          "max_cost_usd": 0,
+          "request_timeout": 12,
+          "max_bytes": 1048576
+        }
+      },
+      "pending": [
+        {
+          "url": "https://img.shields.io/badge/status-public%20preview-34d399",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI",
+          "relation": "author",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/reports/REPORT.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/GATEWAY.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/CATALOG.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/data-access/README.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/SCORING.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RL_RLVR_RSI.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/AGENT_GUIDE.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/SETUP.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RELEASING.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/THIRD_PARTY_NOTICES.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://simreal.co/",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://arxiv.org/abs/2410.07095",
+          "relation": "paper",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/baidubce/FM-Agent",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/aibuildai/AI-Build-AI",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://research.google/teams/cloud-ai-research/",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2602.02660",
+          "relation": "pdf",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/InternScience/MLEvolve",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/FractalAIResearchLabs/PiEvolve",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/baidubce/FM-Agent",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/sjtu-sai-agents/ML-Master",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://research.google/teams/cloud-ai-research/",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2602.02660",
+          "relation": "pdf",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/FractalAIResearchLabs/PiEvolve",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Leeroo-AI/kapso",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://thesislabs.ai/",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://research.google/teams/cloud-ai-research/",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/baidubce/FM-Agent",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://operand.com/",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://research.google/teams/cloud-ai-research/",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Alpha-Innovator/InternAgent/",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/microsoft/RD-Agent",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://heyneo.so/",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/facebookresearch/aira-dojo/",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/microsoft/RD-Agent",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/zeroxleo/ML-Master",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/microsoft/RD-Agent",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/wecoai/aideml",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/wecoai/aideml",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/wecoai/aideml",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/wecoai/aideml",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://disarray.ai/",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/pull/118",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/baidu-baige/LoongFlow",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/pull/119",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/blob/main/experiments/splits",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/blob/main/experiments/splits/low.txt",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://arxiv.org/abs/2410.07095",
+          "relation": "paper",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://git-lfs.com/",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Kaggle/kaggle-api",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/blob/main/agents/README.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/blob/main/extras/README.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/blob/main/examples/README.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/blob/main/experiments/familiarity/README.md",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/frontier-evals",
+          "relation": "code",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/issues/134",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/issues/63",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/issues/58",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/issues/30",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/issues/128",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/issues/122",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/pull/70",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/issues/77",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/issues/93",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/openai/mle-bench/issues/108",
+          "relation": "references",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/reports/REPORT.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/GATEWAY.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/SCORING.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/CATALOG.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RL_RLVR_RSI.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/AGENT_GUIDE.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RELEASING.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/data-access/README.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://img.shields.io/badge/status-public%20preview-34d399",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/THIRD_PARTY_NOTICES.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://simreal.co/",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/SETUP.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/Simreal-AI",
+          "reason": "budget_limit"
+        }
+      ]
+    },
+    "next_directions": [
+      {
+        "url": "https://img.shields.io/badge/status-public%20preview-34d399",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI",
+        "relation": "author",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/reports/REPORT.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/GATEWAY.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/CATALOG.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/data-access/README.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/SCORING.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RL_RLVR_RSI.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/AGENT_GUIDE.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/SETUP.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RELEASING.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/THIRD_PARTY_NOTICES.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://simreal.co/",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://arxiv.org/abs/2410.07095",
+        "relation": "paper",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/baidubce/FM-Agent",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/aibuildai/AI-Build-AI",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://research.google/teams/cloud-ai-research/",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2602.02660",
+        "relation": "pdf",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/InternScience/MLEvolve",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/FractalAIResearchLabs/PiEvolve",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/baidubce/FM-Agent",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/sjtu-sai-agents/ML-Master",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://research.google/teams/cloud-ai-research/",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2602.02660",
+        "relation": "pdf",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/FractalAIResearchLabs/PiEvolve",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Leeroo-AI/kapso",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://thesislabs.ai/",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://research.google/teams/cloud-ai-research/",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/baidubce/FM-Agent",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://operand.com/",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://research.google/teams/cloud-ai-research/",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Alpha-Innovator/InternAgent/",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/microsoft/RD-Agent",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://heyneo.so/",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/facebookresearch/aira-dojo/",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/microsoft/RD-Agent",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/zeroxleo/ML-Master",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/microsoft/RD-Agent",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/wecoai/aideml",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/wecoai/aideml",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/wecoai/aideml",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/wecoai/aideml",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://disarray.ai/",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/pull/118",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/baidu-baige/LoongFlow",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/pull/119",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/blob/main/experiments/splits",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/blob/main/experiments/splits/low.txt",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://arxiv.org/abs/2410.07095",
+        "relation": "paper",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://git-lfs.com/",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Kaggle/kaggle-api",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/blob/main/agents/README.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/blob/main/extras/README.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/blob/main/examples/README.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/blob/main/experiments/familiarity/README.md",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/frontier-evals",
+        "relation": "code",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/issues/134",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/issues/63",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/issues/58",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/issues/30",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/issues/128",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/issues/122",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/pull/70",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/issues/77",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/issues/93",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/openai/mle-bench/issues/108",
+        "relation": "references",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/reports/REPORT.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/GATEWAY.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/SCORING.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/CATALOG.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RL_RLVR_RSI.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/AGENT_GUIDE.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/RELEASING.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/data-access/README.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://img.shields.io/badge/status-public%20preview-34d399",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/THIRD_PARTY_NOTICES.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://simreal.co/",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI/Simreal-MLBench/blob/main/docs/SETUP.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/Simreal-AI",
+        "reason": "budget_limit"
+      }
+    ]
+  }
+}

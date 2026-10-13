@@ -1,0 +1,1700 @@
+{
+  "schema_version": "last30days-intelligence-public-example/1",
+  "provenance": "Recorded real authorized GitHub MCP observations, processed by CLI; not a simulation or a fresh direct-HTTP discovery run.",
+  "export_scope": "Public evidence excerpts; full private snapshots/database paths omitted.",
+  "report": {
+    "schema_version": "last30days-intelligence/1",
+    "id": "intel-c2d6d0e188be4a54aa5f",
+    "revision": "6b8dffbb9cec3662146497ba",
+    "canonical_url": "https://github.com/mizorewww/laya-mlx",
+    "domain": "",
+    "title": "mizorewww/laya-mlx",
+    "summary": "Laya-MLX 把用于选择和评分的 Laya 决策模型移植到 Apple Silicon 本地运行。它值得作为 Agent 路由实验候选，不应当作新的基础模型突破。",
+    "generated_at": "2026-10-13T01:11:42.105743+00:00",
+    "source_trace": {
+      "earliest_verifiable": {
+        "url": "https://github.com/mizorewww/laya-mlx",
+        "published_at": "2026-09-19T13:50:26Z",
+        "date_basis": "host-reported repository_created_at",
+        "scope": "retrieved_records_only",
+        "unrelated_references_excluded": true
+      },
+      "creator_direct": [
+        "https://github.com/mizorewww/laya-mlx"
+      ],
+      "underlying_evidence": [
+        "https://github.com/mizorewww/laya-mlx"
+      ],
+      "related_resources": [
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md",
+          "resource_type": "documentation",
+          "status": "observed_relation_only; same_work_and_claim_support_unknown"
+        },
+        {
+          "url": "https://github.com/NandhaKishorM/laya",
+          "resource_type": "repository",
+          "status": "observed_relation_only; same_work_and_claim_support_unknown"
+        }
+      ],
+      "underlying_evidence_status": "linked_original_material; support_for_experimental_claims_not_established",
+      "origin_status": "primary_resource_verified"
+    },
+    "evidence": [
+      {
+        "url": "https://github.com/mizorewww/laya-mlx",
+        "quote": "# Laya-MLX\n\n![Laya MLX playing Snake — actual decisions, original speed](https://raw.githubusercontent.com/mizorewww/laya-mlx/main/docs/assets/snake-demo.gif)\n\n**Open-weight typed decisions, running natively on Apple Silicon.**\n\n**13.4 ms** median end-to-end for a short English typed decision. **7.4 ms** with the multilingual checkpoint. **0 output tokens.** Local MLX inference, with no PyTorch, T",
+        "locator": "text:chars:174-574",
+        "content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+        "verified_at": "2026-10-12T08:22:32+00:00",
+        "author": "mizorewww",
+        "published_at": "2026-09-19T13:50:26Z",
+        "version": null,
+        "resource_type": "repository",
+        "freshness_status": "host_observed_snapshot",
+        "content_origin": "extracted_or_adapter_assembled_snapshot",
+        "retrieval_records": [
+          {
+            "requested_url": "https://api.github.com/repos/mizorewww/laya-mlx",
+            "response_url": "https://api.github.com/repos/mizorewww/laya-mlx",
+            "status": null,
+            "content_type": "application/json",
+            "body_sha256": "17f119a0bcda55a68a957c2b5296c96fdaeb7778341edd8438c25cc69603e283",
+            "text_sha256": "17f119a0bcda55a68a957c2b5296c96fdaeb7778341edd8438c25cc69603e283",
+            "retrieved_at": "2026-10-12T08:22:32+00:00",
+            "tool": "github.fetch (authorized MCP)",
+            "retrieval_method": "host_tool_observation",
+            "body_encoding": "UTF-8 serialization of supplied host text; original HTTP bytes unknown"
+          },
+          {
+            "requested_url": "https://github.com/mizorewww/laya-mlx/blob/main/README.md",
+            "response_url": "https://github.com/mizorewww/laya-mlx/blob/main/README.md",
+            "status": null,
+            "content_type": "text/markdown",
+            "body_sha256": "f5c2413bfa43df245f2b20b7cb23dd475bde35d728351cfadf2918e949a39a61",
+            "text_sha256": "f5c2413bfa43df245f2b20b7cb23dd475bde35d728351cfadf2918e949a39a61",
+            "retrieved_at": "2026-10-12T08:22:32+00:00",
+            "tool": "github.fetch (authorized MCP)",
+            "retrieval_method": "host_tool_observation",
+            "body_encoding": "UTF-8 serialization of supplied host text; original HTTP bytes unknown"
+          }
+        ],
+        "status": "primary_document_retrieved",
+        "primary_basis": "host-reported original GitHub repository metadata indicates owner control and no fork/mirror; not CLI HTTP verification"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md",
+        "quote": "# Local benchmarks\n\nMeasured on **Apple M3 Max**, 40-core GPU, **128 GiB unified memory**, macOS-27.2-arm64-64bit, Python 3.12.13.\n\nThese are local measurements of the native MLX port and the pinned upstream PyTorch runtime on the same Mac. They are not comparisons with the upstream T4 or third-party API figures.\n\n## Method\n\n- Each checkpoint/backend runs in a fresh process, sequentially, with 5 w",
+        "locator": "text:chars:0-400",
+        "content_hash": "af468244a62d940abe822afe6a9ddb824fe0207ea65df426c829e372aebfee05",
+        "verified_at": "2026-10-12T08:22:32+00:00",
+        "author": null,
+        "published_at": null,
+        "version": null,
+        "resource_type": "documentation",
+        "freshness_status": "host_observed_snapshot",
+        "content_origin": "extracted_or_adapter_assembled_snapshot",
+        "retrieval_records": [
+          {
+            "requested_url": "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md",
+            "response_url": "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md",
+            "status": null,
+            "content_type": "text/markdown",
+            "body_sha256": "af468244a62d940abe822afe6a9ddb824fe0207ea65df426c829e372aebfee05",
+            "text_sha256": "af468244a62d940abe822afe6a9ddb824fe0207ea65df426c829e372aebfee05",
+            "retrieved_at": "2026-10-12T08:22:32+00:00",
+            "tool": "github.fetch (authorized MCP)",
+            "retrieval_method": "host_tool_observation",
+            "body_encoding": "UTF-8 serialization of supplied host text; original HTTP bytes unknown"
+          }
+        ],
+        "status": "document_retrieved",
+        "primary_basis": null
+      },
+      {
+        "url": "https://github.com/NandhaKishorM/laya",
+        "quote": "Multilingual, non-autoregressive System 1 decision engine. Typed decisions over 100+ languages in a single forward pass — 33 ms — trained with reinforcement learning against strictly proper scoring rules (RLCD), with a router that picks the right checkpoint per request.\nInstallation\npython -m pip install laya\nWith uv, run uv add laya in a uv project or uv pip install laya in a virtual environment.",
+        "locator": "text:chars:0-400",
+        "content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+        "verified_at": "2026-10-13T01:04:41.498509+00:00",
+        "author": "NandhaKishorM",
+        "published_at": null,
+        "version": null,
+        "resource_type": "repository",
+        "freshness_status": "historical_not_revalidated",
+        "content_origin": "extracted_or_adapter_assembled_snapshot",
+        "retrieval_records": [
+          {
+            "body_sha256": "4a5411fc2f6277af7d53c86cc662d3340e9d7c8d2f474f28b3f0e73629c04b54",
+            "content_type": "text/html",
+            "etag": "W/\"70b3d885717a6841fc493463e44f6b1b\"",
+            "last_modified": null,
+            "requested_url": "https://github.com/NandhaKishorM/laya",
+            "response_url": "https://github.com/NandhaKishorM/laya",
+            "retrieved_at": "2026-10-13T01:04:41.240216+00:00",
+            "status": 200
+          }
+        ],
+        "status": "document_retrieved",
+        "primary_basis": null
+      }
+    ],
+    "claims": [
+      {
+        "text": "Original observation has no claim text.",
+        "status": "unverified",
+        "evidence_urls": [],
+        "note": "A quoted author claim does not establish independent experimental verification."
+      },
+      {
+        "text": "Primary repository retrieved: mizorewww/laya-mlx",
+        "status": "primary_document_confirmed",
+        "evidence_urls": [
+          "https://github.com/mizorewww/laya-mlx"
+        ],
+        "note": "Confirms document availability and observed metadata only."
+      }
+    ],
+    "verification_status": "primary_material_retrieved; experiments_not_independently_verified",
+    "analysis": {
+      "status": "evidence_linked_agent_review",
+      "new": "这里新增的是 MLX 推理与权重转换实现；原模型训练方法仍来自上游，作者也明确说明这是独立移植。与此前工具的系统比较尚未完成。",
+      "why_it_matters": "受控选项的分类或评分可能用本地决策模型替代部分生成式调用，减少网络依赖；这是假设，不能把单机测量推成普遍性能优势。",
+      "application_potential": "可在 Apple Silicon 上试验工具选择、分类和评分。你的 Windows 电脑不能直接照用这个 MLX 运行环境，需要另一个后端或相应硬件。",
+      "uncertainty": [
+        "No independent replication or experimental fact verification was performed.",
+        "Earliest public record is scoped to retrieved records; global priority is unknown.",
+        "Novelty, originality and practical value are heuristic proxies, not proved breakthroughs.",
+        "Some linked resources could not be retrieved; the evidence chain is partial.",
+        "Agent assessment is an evidence-linked interpretation, not independent fact or experiment verification.",
+        "性能数字来自作者的一台开发机，未独立复现；不能跨设备推广，也不能证明生产稳定性。当前追踪仍有失败或未探索的上游链接。"
+      ],
+      "inferences": [],
+      "agent_insights": [],
+      "agent_assessment": {
+        "finding": {
+          "text": "Laya-MLX 把用于选择和评分的 Laya 决策模型移植到 Apple Silicon 本地运行。它值得作为 Agent 路由实验候选，不应当作新的基础模型突破。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/mizorewww/laya-mlx",
+              "quote": "This repository provides inference and conversion; RLCD training and fine-tuning remain in the upstream project.",
+              "locator": "text:chars:5823-5935",
+              "content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "new": {
+          "text": "这里新增的是 MLX 推理与权重转换实现；原模型训练方法仍来自上游，作者也明确说明这是独立移植。与此前工具的系统比较尚未完成。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/mizorewww/laya-mlx",
+              "quote": "It is an independent port, not an official Convai Innovations release.",
+              "locator": "text:chars:5936-6006",
+              "content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "why_it_matters": {
+          "text": "受控选项的分类或评分可能用本地决策模型替代部分生成式调用，减少网络依赖；这是假设，不能把单机测量推成普遍性能优势。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/mizorewww/laya-mlx",
+              "quote": "First load downloads the checkpoint; later inference is fully local.",
+              "locator": "text:chars:1871-1939",
+              "content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            },
+            {
+              "url": "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md",
+              "quote": "They are not comparisons with the upstream T4 or third-party API figures.",
+              "locator": "text:chars:241-314",
+              "content_hash": "af468244a62d940abe822afe6a9ddb824fe0207ea65df426c829e372aebfee05",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "application_potential": {
+          "text": "可在 Apple Silicon 上试验工具选择、分类和评分。你的 Windows 电脑不能直接照用这个 MLX 运行环境，需要另一个后端或相应硬件。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/mizorewww/laya-mlx",
+              "quote": "Apple Silicon, Python 3.11+, macOS 14+.",
+              "locator": "text:chars:1831-1870",
+              "content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "limitations": {
+          "text": "性能数字来自作者的一台开发机，未独立复现；不能跨设备推广，也不能证明生产稳定性。当前追踪仍有失败或未探索的上游链接。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md",
+              "quote": "This is one development machine and one run of each configuration, with normal OS activity. No claim of cross-device performance or production endurance is made.",
+              "locator": "text:chars:1885-2046",
+              "content_hash": "af468244a62d940abe822afe6a9ddb824fe0207ea65df426c829e372aebfee05",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        },
+        "next_steps": {
+          "text": "有合适 Mac 时，按原文条件比较 MLX 与上游 PyTorch 的同任务正确率及延迟，并单列冷启动、批处理和内存；Windows 上先调查可用的 CPU 决策模型实现。",
+          "status": "ai_inference",
+          "evidence": [
+            {
+              "url": "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md",
+              "quote": "They are not comparisons with the upstream T4 or third-party API figures.",
+              "locator": "text:chars:241-314",
+              "content_hash": "af468244a62d940abe822afe6a9ddb824fe0207ea65df426c829e372aebfee05",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            },
+            {
+              "url": "https://github.com/mizorewww/laya-mlx",
+              "quote": "Apple Silicon, Python 3.11+, macOS 14+.",
+              "locator": "text:chars:1831-1870",
+              "content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+              "verified_at": "2026-10-12T08:22:32+00:00"
+            }
+          ]
+        }
+      },
+      "next_steps": "有合适 Mac 时，按原文条件比较 MLX 与上游 PyTorch 的同任务正确率及延迟，并单列冷启动、批处理和内存；Windows 上先调查可用的 CPU 决策模型实现。"
+    },
+    "score": {
+      "total": 60.75,
+      "components": {
+        "application_potential": 60,
+        "confidence": 85.0,
+        "engagement": 0,
+        "evidence_quality": 75,
+        "novelty": 20,
+        "originality": 50,
+        "technical_value": 65
+      },
+      "weights": {
+        "novelty": 0.15,
+        "originality": 0.15,
+        "technical_value": 0.2,
+        "application_potential": 0.15,
+        "confidence": 0.2,
+        "evidence_quality": 0.15,
+        "engagement": 0
+      },
+      "model_version": "evidence-value/2",
+      "signals": {
+        "scope": "selected_same_work_artifacts_only",
+        "material_content_available": true,
+        "artifact_types": [
+          "repository"
+        ],
+        "technical_terms_observed": true,
+        "usable_interface_terms_observed": true,
+        "verified_recent_record": true,
+        "observed_version": false,
+        "material_change_from_local_history": false,
+        "discovery_role": "artifact_candidate",
+        "scientific_novelty": "unknown",
+        "novelty_scope": "dated/versioned artifact or observed local material change; not scientific innovation",
+        "originality_scope": "observed artifact control; no global-priority or independent-authorship proof",
+        "confidence_scope": "document provenance; not experimental correctness"
+      },
+      "method": "artifact_sufficiency_signals_and_local_history; scientific_novelty_unknown"
+    },
+    "tier": "B",
+    "graph": {
+      "nodes": [
+        {
+          "url": "https://github.com/mizorewww/laya-mlx",
+          "kind": "repository",
+          "author": "mizorewww",
+          "primary_basis": "host-reported original GitHub repository metadata indicates owner control and no fork/mirror; not CLI HTTP verification",
+          "version": null
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md",
+          "kind": "documentation",
+          "author": null,
+          "primary_basis": null,
+          "version": null
+        },
+        {
+          "url": "https://github.com/NandhaKishorM/laya",
+          "kind": "repository",
+          "author": "NandhaKishorM",
+          "primary_basis": null,
+          "version": null
+        }
+      ],
+      "edges": [
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/README.md",
+          "relation": "readme",
+          "label": "Observed README",
+          "locator": "host:paired_snapshot_url",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://raw.githubusercontent.com/mizorewww/laya-mlx/main/docs/assets/snake-demo.gif",
+          "relation": "references",
+          "label": "Laya MLX playing Snake — actual decisions, original speed",
+          "locator": "host:text:L3",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/README.zh-CN.md",
+          "relation": "documentation",
+          "label": "中文",
+          "locator": "host:text:L9",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md",
+          "relation": "documentation",
+          "label": "Benchmarks",
+          "locator": "host:text:L9",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": true
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/SNAKE_DEMO.md",
+          "relation": "documentation",
+          "label": "Snake demo",
+          "locator": "host:text:L9",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://huggingface.co/aac6fef/laya-mlx",
+          "relation": "references",
+          "label": "Hugging Face weights",
+          "locator": "host:text:L9",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/assets/snake-demo.mp4",
+          "relation": "documentation",
+          "label": "Watch the 30-second MP4",
+          "locator": "host:text:L11",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/SNAKE_BENCHMARKS.md",
+          "relation": "documentation",
+          "label": "Snake speed and stability",
+          "locator": "host:text:L11",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/SNAKE_OPTIMIZATION.md",
+          "relation": "documentation",
+          "label": "Gameplay, performance and correctness evidence",
+          "locator": "host:text:L48",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://huggingface.co/aac6fef/laya-multilingual-mlx",
+          "relation": "references",
+          "label": "aac6fef/laya-multilingual-mlx",
+          "locator": "host:text:L92",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://huggingface.co/aac6fef/laya-typed-decisions-mlx",
+          "relation": "references",
+          "label": "aac6fef/laya-typed-decisions-mlx",
+          "locator": "host:text:L93",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/results/hub-publication.json",
+          "relation": "documentation",
+          "label": "hub-publication.json",
+          "locator": "host:text:L95",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx.git",
+          "relation": "code",
+          "label": "",
+          "locator": "host:text:L106",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/NandhaKishorM/laya/commit/1adc59f7e371deb601fcfa18a14e25db238addcc",
+          "relation": "references",
+          "label": "`1adc59f`",
+          "locator": "host:text:L212",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/results/upstream-v041-validation.json",
+          "relation": "documentation",
+          "label": "raw validation report",
+          "locator": "host:text:L298",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/results",
+          "relation": "documentation",
+          "label": "benchmarks/results",
+          "locator": "host:text:L362",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/PERFORMANCE_RESEARCH.md",
+          "relation": "documentation",
+          "label": "Initial performance research",
+          "locator": "host:text:L370",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/MATH_10X_RESEARCH.md",
+          "relation": "documentation",
+          "label": "Mathematical investigation of a further 10× speedup",
+          "locator": "host:text:L371",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/ENGINEERING_10X_RESEARCH.md",
+          "relation": "documentation",
+          "label": "Engineering investigation",
+          "locator": "host:text:L372",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/experiments",
+          "relation": "documentation",
+          "label": "experiments/",
+          "locator": "host:text:L374",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/LICENSE",
+          "relation": "documentation",
+          "label": "LICENSE",
+          "locator": "host:text:L389",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/NOTICE",
+          "relation": "documentation",
+          "label": "NOTICE",
+          "locator": "host:text:L389",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx",
+          "to_url": "https://github.com/NandhaKishorM/laya",
+          "relation": "code",
+          "label": "NandhaKishorM/laya",
+          "locator": "host:text:L389",
+          "state": "observed_link",
+          "source_content_hash": "a9c91b1e932847e15468af3f8b36a989519d58b050a07a50c60e45783b5ed679",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md",
+          "to_url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/latency.png",
+          "relation": "documentation",
+          "label": "Local latency comparison",
+          "locator": "host:text:L19",
+          "state": "observed_link",
+          "source_content_hash": "af468244a62d940abe822afe6a9ddb824fe0207ea65df426c829e372aebfee05",
+          "observed_at": "2026-10-12T08:22:32+00:00",
+          "target_verified": false
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 9, a[1]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://colab.research.google.com/drive/15d4Yv__KHeHjshVb-6PRTfqVllxih2S3?usp=sharing",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 10, a[2]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://pypi.org/project/laya/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 11, a[3]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://nandhakishorm.github.io/laya/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 12, a[4]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://huggingface.co/convaiinnovations/laya",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 13, a[5]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://huggingface.co/convaiinnovations/laya-multilingual",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 14, a[6]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://huggingface.co/spaces/convaiinnovations/laya-demo",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 15, a[7]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://dev.to/nandakishor_m_6cc0adfde9f/i-built-non-autoregressive-decision-models-a-year-ago-then-a-frontier-lab-called-it-a-18me",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 16, a[8]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://www.buymeacoffee.com/nandakishorm",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 17, a[9]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://opensource.org/licenses/Apache-2.0",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 19, a[10]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "uv",
+          "locator": "html:repository-readme/line 21, a[11]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://docs.astral.sh/uv/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "laya-ts/",
+          "locator": "html:repository-readme/line 23, a[13]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/tree/main/laya-ts/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "research/scripts/bench_long_context.py",
+          "locator": "html:repository-readme/line 24, a[14]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/research/scripts/bench_long_context.py",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 26, a[15]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://raw.githubusercontent.com/NandhaKishorM/laya/main/assets/long_context_8192.png",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "Fine-tuning notebook",
+          "locator": "html:repository-readme/line 86, a[20]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/notebooks/laya_finetune_typed_decisions_2xT4_kaggle.ipynb",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "Apple Silicon script",
+          "locator": "html:repository-readme/line 86, a[21]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/notebooks/laya_finetune_typed_decisions_mps.py",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "prediction hooks",
+          "locator": "html:repository-readme/line 88, a[25]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://nandhakishorm.github.io/laya/hooks/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "schema-driven decisions",
+          "locator": "html:repository-readme/line 88, a[26]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://nandhakishorm.github.io/laya/structured/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "Docker",
+          "locator": "html:repository-readme/line 88, a[27]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://nandhakishorm.github.io/laya/docker/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "LangChain and LangGraph",
+          "locator": "html:repository-readme/line 88, a[28]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://nandhakishorm.github.io/laya/langchain/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "API reference",
+          "locator": "html:repository-readme/line 88, a[29]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://nandhakishorm.github.io/laya/reference/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "GitHub releases",
+          "locator": "html:repository-readme/line 109, a[31]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "release",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/releases",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 112, a[32]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://raw.githubusercontent.com/NandhaKishorM/laya/main/assets/laya_vs_jev_full.png",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "laya-typed-decisions",
+          "locator": "html:repository-readme/line 142, a[35]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://huggingface.co/convaiinnovations/laya-typed-decisions",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "examples/README.md",
+          "locator": "html:repository-readme/line 164, a[37]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/examples/README.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "LOCAL_SETUP.md",
+          "locator": "html:repository-readme/line 168, a[38]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/LOCAL_SETUP.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "BENCHMARKS.md",
+          "locator": "html:repository-readme/line 172, a[39]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/BENCHMARKS.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "research/README.md",
+          "locator": "html:repository-readme/line 176, a[40]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/research/README.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "PyTorch's installation guide",
+          "locator": "html:repository-readme/line 183, a[42]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://pytorch.org/get-started/locally/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "Intel GPU guide",
+          "locator": "html:repository-readme/line 202, a[43]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://docs.pytorch.org/docs/2.14/notes/get_start_xpu.html",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "uv's PyTorch guide",
+          "locator": "html:repository-readme/line 223, a[45]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://docs.astral.sh/uv/guides/integration/pytorch/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "#123",
+          "locator": "html:repository-readme/line 243, a[47]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/issues/123",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "#195",
+          "locator": "html:repository-readme/line 244, a[48]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/pull/195",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "laya-client",
+          "locator": "html:repository-readme/line 447, a[57]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/sdk/typescript/README.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "repository analysis",
+          "locator": "html:repository-readme/line 473, a[59]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/docs/typescript-sdk.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "Docker Compose quickstart",
+          "locator": "html:repository-readme/line 477, a[61]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/docs/docker.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "docs/hooks/lifecycle.md",
+          "locator": "html:repository-readme/line 672, a[67]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/docs/hooks/lifecycle.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "hs-jev",
+          "locator": "html:repository-readme/line 831, a[73]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/getmissionctrl/hs-jev",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "marcreichel/laya-php",
+          "locator": "html:repository-readme/line 833, a[74]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/marcreichel/laya-php",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "#394",
+          "locator": "html:repository-readme/line 893, a[77]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/issues/394",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "TileLang",
+          "locator": "html:repository-readme/line 1056, a[84]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/tile-ai/tilelang",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "the engineering notes",
+          "locator": "html:repository-readme/line 1095, a[88]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/docs/compile-and-fast-path.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "LangChain LayaRouter",
+          "locator": "html:repository-readme/line 1143, a[93]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/docs/langchain.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "docs/hooks/",
+          "locator": "html:repository-readme/line 1203, a[95]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/docs/hooks/index.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "examples/hooks/",
+          "locator": "html:repository-readme/line 1203, a[96]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/tree/main/examples/hooks/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "docs/structured.md",
+          "locator": "html:repository-readme/line 1239, a[98]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/docs/structured.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "#131",
+          "locator": "html:repository-readme/line 1434, a[105]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/issues/131",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "Ratner et al., 2023",
+          "locator": "html:repository-readme/line 1479, a[107]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "paper",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://arxiv.org/abs/2212.10947",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "MCP",
+          "locator": "html:repository-readme/line 1529, a[109]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://modelcontextprotocol.io/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "shared-server MCP setup",
+          "locator": "html:repository-readme/line 1540, a[110]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/docs/cli-mcp.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "laya/serve.py",
+          "locator": "html:repository-readme/line 1558, a[111]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/laya/serve.py",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "docs/evals.md",
+          "locator": "html:repository-readme/line 1636, a[116]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/docs/evals.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "Chinese workplace decisions (Feishu-style)",
+          "locator": "html:repository-readme/line 1639, a[118]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/research/benchmarks/feishu_zh/README.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "中文说明",
+          "locator": "html:repository-readme/line 1639, a[119]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/research/benchmarks/feishu_zh/README.zh-CN.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "Chinese short-command routing",
+          "locator": "html:repository-readme/line 1639, a[120]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/research/benchmarks/zh_short_commands/README.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "中文说明",
+          "locator": "html:repository-readme/line 1639, a[121]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/research/benchmarks/zh_short_commands/README.zh-CN.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "",
+          "locator": "html:repository-readme/line 1642, a[123]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://raw.githubusercontent.com/NandhaKishorM/laya/main/assets/laya_benchmark.png",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "research/scripts/laya_benchmark_colab.ipynb",
+          "locator": "html:repository-readme/line 1646, a[124]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/research/scripts/laya_benchmark_colab.ipynb",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "AbdelStark",
+          "locator": "html:repository-readme/line 1681, a[126]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/AbdelStark/jev-benchmarks",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "nibzard",
+          "locator": "html:repository-readme/line 1682, a[127]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/nibzard/decision-model-benchmark",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "#377",
+          "locator": "html:repository-readme/line 1955, a[139]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/issues/377",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "research/benchmarks/tournament",
+          "locator": "html:repository-readme/line 2019, a[141]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/research/benchmarks/tournament/README.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "Issue #102",
+          "locator": "html:repository-readme/line 2066, a[142]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/issues/102",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "#156",
+          "locator": "html:repository-readme/line 2090, a[143]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/issues/156",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "omp-laya-judge",
+          "locator": "html:repository-readme/line 2107, a[145]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/F0Rextasy/omp-laya-judge",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "oh-my-pi",
+          "locator": "html:repository-readme/line 2107, a[146]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/can1357/oh-my-pi",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "laya-adk-toolkit",
+          "locator": "html:repository-readme/line 2108, a[147]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/Ashfaqbs/laya-adk-toolkit",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "Google ADK",
+          "locator": "html:repository-readme/line 2108, a[148]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://google.github.io/adk-docs/",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "laya-Ascend",
+          "locator": "html:repository-readme/line 2109, a[149]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/zzhdbw/laya-Ascend",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "laya-apple",
+          "locator": "html:repository-readme/line 2110, a[150]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/tc3oliver/laya-apple",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "stuntd",
+          "locator": "html:repository-readme/line 2111, a[151]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/bladedevoff/stuntd",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "docs/finetune_browser_agent.md",
+          "locator": "html:repository-readme/line 2156, a[160]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "documentation",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/NandhaKishorM/laya/blob/main/docs/finetune_browser_agent.md",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "browser-use/jev-ultrafast",
+          "locator": "html:repository-readme/line 2158, a[161]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "code",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://github.com/browser-use/jev-ultrafast",
+          "freshness_status": "historical_not_revalidated"
+        },
+        {
+          "from_url": "https://github.com/NandhaKishorM/laya",
+          "label": "cklxx/laya-browser",
+          "locator": "html:repository-readme/line 2161, a[162]/@href",
+          "observed_at": "2026-10-13T01:04:41.498509+00:00",
+          "relation": "references",
+          "source_content_hash": "10d54e7442a9c651cafa8938f9c6bd9bd04fefd265339b7e141e5846d9c1dc88",
+          "state": "historical_observed_link",
+          "target_verified": false,
+          "to_url": "https://huggingface.co/cklxx/laya-browser",
+          "freshness_status": "historical_not_revalidated"
+        }
+      ]
+    },
+    "failures": [
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/README.md",
+        "status": "budget_exhausted",
+        "reason": "call budget exhausted"
+      }
+    ],
+    "exploration": {
+      "truncated": true,
+      "visited_nodes": 3,
+      "cache_hits": 0,
+      "budget": {
+        "operations": 3,
+        "resource_nodes": 4,
+        "cost_usd": 0.0,
+        "elapsed_seconds": 0.243,
+        "limits": {
+          "max_depth": 1,
+          "max_calls": 3,
+          "max_nodes": 4,
+          "max_seconds": 10,
+          "max_cost_usd": 0,
+          "request_timeout": 12,
+          "max_bytes": 1048576
+        }
+      },
+      "pending": [
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/latency.png",
+          "relation": "documentation",
+          "reason": "depth_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/README.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/NandhaKishorM/laya",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/SNAKE_DEMO.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/README.zh-CN.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/SNAKE_BENCHMARKS.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/LICENSE",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/results/hub-publication.json",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/assets/snake-demo.mp4",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/PERFORMANCE_RESEARCH.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/SNAKE_OPTIMIZATION.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/NOTICE",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://huggingface.co/aac6fef/laya-typed-decisions-mlx",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://huggingface.co/aac6fef/laya-mlx",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/NandhaKishorM/laya/commit/1adc59f7e371deb601fcfa18a14e25db238addcc",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/results/upstream-v041-validation.json",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/results",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/mizorewww/laya-mlx/main/docs/assets/snake-demo.gif",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/MATH_10X_RESEARCH.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/ENGINEERING_10X_RESEARCH.md",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://github.com/mizorewww/laya-mlx/blob/main/experiments",
+          "reason": "budget_limit"
+        },
+        {
+          "url": "https://huggingface.co/aac6fef/laya-multilingual-mlx",
+          "reason": "budget_limit"
+        }
+      ]
+    },
+    "next_directions": [
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/latency.png",
+        "relation": "documentation",
+        "reason": "depth_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/README.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/NandhaKishorM/laya",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/SNAKE_DEMO.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/README.zh-CN.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/SNAKE_BENCHMARKS.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/LICENSE",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/results/hub-publication.json",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/assets/snake-demo.mp4",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/PERFORMANCE_RESEARCH.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/SNAKE_OPTIMIZATION.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/NOTICE",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://huggingface.co/aac6fef/laya-typed-decisions-mlx",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://huggingface.co/aac6fef/laya-mlx",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/NandhaKishorM/laya/commit/1adc59f7e371deb601fcfa18a14e25db238addcc",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/results/upstream-v041-validation.json",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/benchmarks/results",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/mizorewww/laya-mlx/main/docs/assets/snake-demo.gif",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/MATH_10X_RESEARCH.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/docs/ENGINEERING_10X_RESEARCH.md",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://github.com/mizorewww/laya-mlx/blob/main/experiments",
+        "reason": "budget_limit"
+      },
+      {
+        "url": "https://huggingface.co/aac6fef/laya-multilingual-mlx",
+        "reason": "budget_limit"
+      }
+    ]
+  }
+}

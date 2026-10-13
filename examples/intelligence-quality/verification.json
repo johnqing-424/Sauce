@@ -1,0 +1,98 @@
+{
+  "real_external_lane": "authorized GitHub MCP",
+  "native_tool_attempts": 26,
+  "real_sources_received_at": [
+    "2026-10-12T08:22:32+00:00",
+    "2026-10-13T01:31:04+00:00"
+  ],
+  "findings": [
+    {
+      "project": "https://github.com/mizorewww/laya-mlx",
+      "analysis": "evidence_linked_agent_review",
+      "exact_citations": 8,
+      "value_proxy": 60.75,
+      "experiments_independently_verified": false,
+      "verified_document_links": [
+        "https://github.com/mizorewww/laya-mlx/blob/main/BENCHMARKS.md"
+      ]
+    },
+    {
+      "project": "https://github.com/strands-labs/strands-decider",
+      "analysis": "evidence_linked_agent_review",
+      "exact_citations": 7,
+      "value_proxy": 60.75,
+      "experiments_independently_verified": false,
+      "verified_document_links": [
+        "https://github.com/strands-labs/strands-decider/blob/main/evaluation/results.md"
+      ]
+    },
+    {
+      "project": "https://github.com/simreal-ai/simreal-mlbench",
+      "analysis": "evidence_linked_agent_review",
+      "exact_citations": 7,
+      "value_proxy": 60.75,
+      "experiments_independently_verified": false,
+      "verified_document_links": []
+    }
+  ],
+  "database_counts": {
+    "intel_events": 3,
+    "intel_revisions": 3,
+    "intel_outbox": 0,
+    "intel_delivery_log": 0
+  },
+  "repeat_report_change": "unchanged",
+  "portfolio_regression": {
+    "project": "https://github.com/jahnvisikligar/jahnvisikligar.github.io",
+    "tier": "hold",
+    "value_proxy": 32.75,
+    "novelty": 0,
+    "technical_value": 0
+  },
+  "direct_cli_collection": {
+    "candidates": 0,
+    "reports": 0,
+    "outcome": "blocked by managed cloud network policy; does not prove no worthwhile AI resources exist",
+    "operations": 7,
+    "seconds": 42.31
+  },
+  "notifications_sent": 0,
+  "new_windows_quality_run_verified": false,
+  "mock_tests_are_separate": true,
+  "experiments_independently_verified": false,
+  "limitations": [
+    "Value proxies are heuristics, not calibrated scientific novelty estimates.",
+    "Headless CLI does not run a semantic LLM review.",
+    "Direct cloud upstream collection did not succeed.",
+    "Real robot notifications and updated Windows research quality still need separate verification."
+  ],
+  "test_validation_scope": "New quality regressions are simulated; original full-suite timing fixture failures were investigated separately and fixed in tests without changing production timeout/cleanup behavior.",
+  "source_commit": "2f498f844f21c560e52d0d69f9bfdc4ff2cb5483",
+  "full_test_suite": {
+    "passed": 6580,
+    "skipped": 11,
+    "subtests_passed": 205,
+    "seconds": 476.97,
+    "coverage_remeasured": false
+  },
+  "preliminary_full_run_failures": [
+    "An existing doctor test mocked shared stdlib sleep and counted process-reap polling.",
+    "Existing process/health fixtures failed to reach descendant readiness under short startup windows."
+  ],
+  "timing_fixture_changes": "Scoped the doctor clock mock, made descendant readiness explicit, measured cleanup after readiness, and allowed health fixture startup. Production timeout/cleanup code unchanged.",
+  "package": {
+    "sha256": "b193c998bbe0c4358969401f4c50c11b5e0644112970e889f6004ee97a8bb860",
+    "bytes": 15809871,
+    "manifest_files": 799,
+    "zip_crc_verified": true,
+    "isolated_install": true,
+    "idempotent_install": true,
+    "backup_restore_material_retained": true,
+    "private_config_and_db_preserved": true,
+    "new_cli_flags_available": true,
+    "vendored_timezone_without_system_database": true,
+    "cmd_crlf_verified": true,
+    "native_windows_cmd_executed": false,
+    "notifications_sent": 0
+  }
+}
