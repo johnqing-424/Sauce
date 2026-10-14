@@ -1,0 +1,85 @@
+{
+  "request": "$last30days AI圈的热点",
+  "test_start_utc": "2026-10-13T10:17:07Z",
+  "research_start_utc": "2026-10-13T10:18:34.971Z",
+  "deadline_utc": "2026-10-13T10:24:34.971Z",
+  "retrieval_end_utc": "2026-10-13T10:21:00.223Z",
+  "answer_written_utc": "2026-10-13T10:24:15.730Z",
+  "application_end_utc": "2026-10-13T10:24:30.095Z",
+  "application_total_seconds": 443.095,
+  "native_retrieval_seconds": 145.25190901756287,
+  "research_session_elapsed_seconds": 354.927,
+  "remaining_seconds_at_finish": 5.073,
+  "external_operations": 18,
+  "search_queries": 5,
+  "page_read_attempts": 13,
+  "web_batch_calls": 6,
+  "route": "SKILL.md -> references/codex-research.md -> native search/read -> research_session finish",
+  "setup_invoked": false,
+  "engine_invoked": false,
+  "implementation_read": false,
+  "software_installed": false,
+  "browser_cookies_read": false,
+  "new_keys_requested": false,
+  "source_repair": false,
+  "notifications_sent": false,
+  "source_commit": "ba08ab1a28900507a2dfb7bc301927ab320c18e5",
+  "test_including_additional_audit_seconds": 760.245,
+  "private_raw_tool_material_sha256": "71ec0413dd49a0c3ce137bb4dcb07a897861985ecc6c3a630d68003471139b91",
+  "source_answer_sha256": "ccb48a246b919685c33421c6a0b83f37d0f8e02b5c3b43f7d84824a4f3108abc",
+  "public_answer_sha256": "3b28161f10d8e806b48c8c94629edaf98e70052a1409d0b0f456f3ad1d5399b7",
+  "public_answer_whitespace_normalized": true,
+  "original_publication_dates": {
+    "https://www.anthropic.com/claude-haiku-5-5": "2026-10-07",
+    "https://arxiv.org/abs/2609.19947": "2026-09-17",
+    "https://arxiv.org/abs/2609.25173": "2026-09-21"
+  },
+  "short_exact_quotes": [
+    {
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "quote": "prompts up to / over 100k"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.19947v1",
+      "quote": "replay the recorded LLM outputs"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.25173v1",
+      "quote": "We have not published an artifact repository."
+    }
+  ],
+  "original_observed_slow_run": {
+    "source": "user-shared screenshots and read-only matching app thread",
+    "duration_seconds": 2876.673,
+    "command_executions": 55,
+    "file_read_commands": 27,
+    "raw_commands_or_browser_data_published": false
+  },
+  "regression": {
+    "initial_full_run": {
+      "passed": 6607,
+      "failed": 6,
+      "skipped": 11,
+      "subtests_passed": 205,
+      "seconds": 682.38
+    },
+    "final_affected_suite": {
+      "passed": 255,
+      "subtests_passed": 8,
+      "seconds": 39.97
+    },
+    "notes": [
+      "Two legacy metadata-format contract failures corrected by retaining block-list optionalEnv.",
+      "Four short-deadline test failures passed in the full affected-suite rerun; production deadline code unchanged.",
+      "No claim that the final source was verified by an entirely green full-suite rerun."
+    ]
+  },
+  "limitations": [
+    "Cloud application; native Windows execution and performance not tested.",
+    "One HN discussion sample is not a global popularity ranking; other named social platforms not covered.",
+    "Reuters and system-card retrieval failed; missing source coverage retained.",
+    "Native page responses do not establish experimental reproduction or independent publisher performance.",
+    "Session checkpoints do not forcibly interrupt Codex reasoning or an in-flight tool.",
+    "Two local audit orchestration mistakes were corrected after the research answer; audit duration is reported separately."
+  ]
+}

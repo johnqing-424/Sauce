@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "bytes": 23534,
+  "sha256": "f9491cad470fd7cfef457f14a79f3afffd6885ea7c80389f359f76e19537dbb7",
+  "changed_skill_files": 4,
+  "unrelated_existing_skill_files_preserved": 798,
+  "actual_prior_native_payload_used": true,
+  "local_cdp_fix_preserved": true,
+  "private_config_and_db_preserved": true,
+  "backup_verified": true,
+  "idempotent_update": true,
+  "unknown_edits_rejected": true,
+  "zip_crc_verified": true,
+  "cmd_crlf_verified": true,
+  "native_windows_cmd_executed": false,
+  "notifications_sent": 0
+}

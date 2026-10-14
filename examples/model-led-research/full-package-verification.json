@@ -1,0 +1,19 @@
+{
+  "sha256": "a19a75ddc85990c863431be076f5dbed1196ad512a3a86235c94eac1595b5d19",
+  "bytes": 15823597,
+  "manifest_files": 802,
+  "zip_crc_verified": true,
+  "isolated_install": true,
+  "idempotent_install": true,
+  "backup_restore_material_retained": true,
+  "private_config_and_db_preserved": true,
+  "new_cli_flags_available": true,
+  "vendored_timezone_without_system_database": true,
+  "cmd_crlf_verified": true,
+  "installed_payload_real_document_replay": true,
+  "installed_payload_findings": 3,
+  "installed_payload_exact_citations": 24,
+  "installed_payload_external_requests": 0,
+  "native_windows_cmd_executed": false,
+  "notifications_sent": 0
+}
