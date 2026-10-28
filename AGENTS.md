@@ -6,6 +6,14 @@ Use it only in the Sauce project and its subdirectories. Read its
 `references/local-windows.md` for this project's runtime and report delivery.
 Do not register the skill, launchers, or report rules at user scope.
 
+## Git 仓库范围
+
+- Git 仓库根目录是 `E:\Sauce`，远端为 `johnqing-424/Sauce`，默认分支为 `main`。
+- `Agent-Reach` 是源码子目录；在其中执行 Git 命令也应解析到 `E:\Sauce`。
+- `AGENTS.md`、`CLAUDE.md`、`.agents/skills/` 和 `.claude/skills/` 都在根仓库内直接跟踪。
+- 提交和推送前，从根目录检查全部改动，并核对两套 Skill 文件一致。
+- 共用规则仅维护根目录的 `AGENTS.md`，不要在源码子目录创建规则副本或独立 Git 仓库。
+
 ## Skill 双副本同步规则（Codex 与 Claude Code 共同遵守）
 
 本项目的 Skill 有两份副本：Codex 读取 `E:\Sauce\.agents\skills\`，Claude Code 读取
